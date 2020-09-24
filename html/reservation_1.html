@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petland - 예약</title>
+    <script src="https://kit.fontawesome.com/72c88d65e7.js" crossorigin="anonymous"></script>
+	
+</head>
+<body>
+    <div class="wrap">
+        <header id="header">
+            <div class="header__inner">
+                <img src="../img/logo.png" alt="logo" class="header__logo">
+                <ul class="header__menu">
+                    <li class="header__menu__item">서비스 소개</li>
+                    <li class="header__menu__item">예약하기</li>
+                    <li class="header__menu__item text-color">펫시터 지원</li>
+                </ul>
+            </div>
+        </header>
+        <section class="intro">
+            <div class="container">
+                <div class="intro__left">
+                    <h1 class="title">Lorem ipsum dolor,<br> sit amet consectetur adipisicing.</h1>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, saepe.</p>
+                </div>
+                <div class="intro__right">
+                    <div class="intro__img">
+                        <img src="../img/reservation.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="input-form">
+            <div class="container">
+                <form action="" method="POST">
+                    <div class="form__checkbox">
+                        <p class="question">서비스</p>
+                        <input type="checkbox" name="service" value="walking" id="walking" checked><label for="walking"><i class="fas fa-paw"></i>노즈산책</label>
+                        <input type="checkbox" name="service" value="care" id="care"><label for="care"><i class="fas fa-home"></i>방문돌봄</label>
+                    </div>
+                    <label for="">주소<input type="text" name="address"></label>
+                    <label for="">날짜<input type="date" name="date"></label>
+                    <label for="">시작시간<input type="time" value="09:00" name="start-time"></label>
+                    <label for="">종료시간<input type="time" value="19:00" name="end-time"></label>
+                    <button type="submit" class="btn btn-lg"><a href="./reservation_2.html">펫시터님 매칭하기</a></button>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
