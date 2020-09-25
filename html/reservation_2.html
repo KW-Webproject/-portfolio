@@ -37,15 +37,15 @@
         <section class="input-form">
             <div class="container">
                 <form action="" method="POST">
-                    <label for="">이름<input type="text" name="name"></label>
-                    <label for="">연락처<input type="tel" name="tel"></label>
+                    <label for="">이름<input type="text" name="name" required></label>
+                    <label for="">연락처<input type="tel" name="tel" required></label>
                     <button type="button" class="btn" id="alert">인증</button>
                     <hr>
                     <div class="receipt">
                         <p class="text-sm">item X n시간</p>
                         <p class="text-sm text-color">총 금액 : 10000000원</p>
                     </div>
-                    <button type="submit" class="btn btn-lg"><a href="./reservation_3.html">결제하기</a></button>
+                    <button type="submit" class="btn btn-lg" id="payBtn"><a href="./reservation_3.html">결제하기</a></button>
                 </form>
             </div>
         </section>
