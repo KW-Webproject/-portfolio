@@ -8,7 +8,7 @@ video{width: 100vw;}button{background: transparent; cursor: pointer; border: non
 label{display: block;}
 .wrap{width: 100vw;height: auto;}
 .container{margin: auto;max-width: 80%;}
-.mt{margin-top: 140px;}
+.mt{padding-top: 140px;}
 :root{
     /* color */
     --color-primary: #cc89df;
