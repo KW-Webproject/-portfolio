@@ -43,6 +43,7 @@
 }
 
 /* Service */
+
 #service{
     margin: 2rem auto;
 }
@@ -79,6 +80,15 @@
     margin-top: 0.5rem;
 }
 
+/* Price */
+#price{
+    margin: 2rem auto;
+}
+
+/* Petsitter */
+#petsitter{
+    margin: 2rem auto;
+}
 @media only screen and (min-width: 1025px){
     .fullpage{
         height: 100vh;

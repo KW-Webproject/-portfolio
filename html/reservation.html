@@ -18,7 +18,7 @@
         <header id="header">
             <header id="header">
                 <div class="header__inner fbx">
-                    <a href="#"><img src="../img/logo.png" alt="logo" class="header__logo"></a>
+                    <a href="main.html"><img src="../img/logo.png" alt="logo" class="header__logo"></a>
                     <ul class="header__menu fbx text-md">
                         <li class="header__menu__item"><a href="main.html">홈</a></li>
                         <li class="header__menu__item"><a href="service.html">서비스 소개</a></li>
@@ -65,9 +65,14 @@
                                     </div>
                                 </div>
                                 <label for="">주소<input type="text" name="address"></label>
+                                <!-- 오늘 날짜 이후로 지정되게 js 필요!-->
                                 <label for="">날짜<input type="date" name="date"></label>
-                                <label for="">시작시간<input type="time" value="09:00" name="start-time"></label>
-                                <label for="">종료시간<input type="time" value="19:00" name="end-time"></label>
+                                <!-- 시간 입력하면 js가 변환 -->
+                                <!-- 시간은 30분 단위로 입력 가능합니다. => double check -->
+                                <label for="">시작시간<input type="time" value="09:00" min="09:00" max="18:00"
+                                        name="start-time"></label>
+                                <label for="">종료시간<input type="time" value="19:00" min="10:00" max="19:00"
+                                        name="end-time"></label>
                                 <button type="button" id="re-btn" class="btn btn-lg">예약하기</button>
                             </form>
                         </section>
@@ -133,10 +138,6 @@
                     </div>
                 </div>
             </footer>
-    </div>
-    </div>
-
-    <button class="arrowUp" data-link="#main"><i class="fas fa-arrow-up"></i></button>
     </div>
 </body>
 
