@@ -3,7 +3,7 @@ h2, h3, nav, i, span{padding: 0;margin: 0;box-sizing: border-box;} */
 *{padding: 0;margin: 0;box-sizing: border-box;}
 body{/* 400, 700, 800 */font-family: 'Nanum Gothic', sans-serif;}
 a{text-decoration: none;color: var(--color-black);}ul{list-style: none;}img{width: 100%;}
-video{width: 100vw; height: 100vh;}button{background: transparent; cursor: pointer; border: none; outline: none;}
+video{width: 100vw;}button{background: transparent; cursor: pointer; border: none; outline: none;}
 .fbx{display: flex;align-items: center;}
 
 .wrap{width: 100%;height: auto;}
@@ -34,7 +34,7 @@ section{margin-top: 140px;}
 .description{font-size: 1.5rem;}
 
 .text-lg{font-size: 5rem;font-weight: 700;color: #ffffff;}
-.text-md{font-size: 1.3rem;}
+.text-md{font-size: 1rem;}
 .text-sm{font-size: 0.9rem;}
 
 .bd{font-weight: 700;}
