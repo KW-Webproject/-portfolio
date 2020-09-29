@@ -1,57 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
-    <!-- <link rel="stylesheet" href="./css/introduce.css"> -->
-</head>
-<body>
-    <header>
-        <h2><a href="#">HOME or Main Logo</a></h2>
-        <nav class="header-con">                    
-            <li class="item-head"><a href="#">메인페이지</a></li>
-            <li class="item-head"><a href="#">서비스 소개</a></li>
-            <li class="item-head"><a href="#">예약</a></li>
-            <li class="item-head"><a href="#">펫시터 지원</a></li>            
-        </nav>
-    </header>
-
-
-    <section class="section-con">
-        <div class="first-sec item-sec">
-            <!-- 백그라운드 이미지 사용해서 컨텐츠를 넣어도 좋을듯 -->
-            <img class="img-sec" src="../img/pet1.jpg" width="100%" alt="1st_img">
-           <h3>반려동물 토탈 돌봄 서비스입니다.</h3>
-           <p>검증된 펫시터들이 준비하고 있습니다.</p>
-        </div>
-        <div class="second-sec item-sec">
-             <!-- <div class="replace-img">div로 대체</div> -->
-        </div>
-        <div class="third-sec item-sec">
-            <h3>방문 돌봄</h3>
-            <p>고객의 집으로 찾아가 반려견을 돌봅니다.<br>펫시터가 방문하여 익숙학 환경에서 돌봄을 진행하기 때문에 예민한 반려견도 안심하고 맡길 수 있습니다. </p>
-            <h3>위탁 돌봄</h3>
-            <p>펫시터의 집에서 반려견을 돌봅니다. <br> 원하는 기간동안 펫시터가 맞춤돌봄을 하기 때문에 안심하고 맡길 수 있습니다.</p>
-        </div>
-        <div class="fourth-sec item-sec">
-            <img src="../img/pet2.jpg" width="100%" alt="">
-        </div>
-
+<html lang="kr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>펫랜드</title>
+    <script
+      src="https://kit.fontawesome.com/ab5060240a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/hd_tf.css" />
+    <script src="../js/fullpage.js" def></script>
+    <!-- 400, 700, 800 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrap fullpage">
+      <div class="main_contents">
+        <header id="header">
+          <div class="header__inner fbx">
+            <a href="#"
+              ><img src="../img/logo.png" alt="logo" class="header__logo"
+            /></a>
+            <ul class="header__menu fbx text-md">
+              <li class="header__menu__item selected">
+                <a href="main.html">홈</a>
+              </li>
+              <li class="header__menu__item">
+                <a href="service.html">서비스 소개</a>
+              </li>
+              <li class="header__menu__item">
+                <a href="reservation.html">예약하기</a>
+              </li>
+              <li class="header__menu__item">
+                <a class="text-primary bd" href="apply.html">펫시터 지원</a>
+              </li>
+            </ul>
+          </div>
+        </header>
+        <section id="serv-intro">
+            <div class="container">
+                <!-- 백그라운드 이미지 사용해서 컨텐츠를 넣어도 좋을듯 GOOD!-->
+                <div class="serv-intro--img serv--img"><img src="../img/pet1.jpg" alt="1st_img"></div>
+                <div class="serv-intro--description serv--description">
+                    <h1 class="text-lg text-bd">반려동물 토탈 돌봄 서비스입니다.</h1>
+                    <p class="text-md">검증된 펫시터들이 준비하고 있습니다.</p>
+                </div>
+            </div>
+        </section>
+        <section id="serv-category">
+            <div class="container">
+                <!-- 백그라운드 이미지 사용해서 컨텐츠를 넣어도 좋을듯 GOOD!-->
+                <div class="serv-category--img serv--img"><img src="../img/pet1.jpg" alt="1st_img"></div>
+                <div class="serv-category--description serv--description">
+                    <h1 class="text-lg text-bd">반려동물 토탈 돌봄 서비스입니다.</h1>
+                    <p class="text-md">검증된 펫시터들이 준비하고 있습니다.</p>
+                </div>
+            </div>
+        </section>
+        <section id="serv-cost">
+            <div class="container">
+                <div class="serv-cost--img serv--img"><img src="../img/pet1.jpg" alt="1st_img"></div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
         <!-- 소개할 컨텐츠가 있으면 지속적으로 추가 -->
-    </section>
-
-    
-
-    <footer class="footer-con">
-        <div class="first-foo item-foo">
-            <p>
-            000 N. 관천로 28 Rm 000. KW CA 0000000 | TEL:000-0000-0000 | FAX:000-0000-0000 | E-mail:fet@fet.com
-Copyright Volunteer. All rights reserved</p>
-        </div>
-        <div class="second-foo item-foo">
-            <!-- sns 아이콘 삽입-->
-        </div>
-    </footer>
-</body>
+        <footer id="footer">
+          <div class="fbx footer__inner">
+            <div class="footer__left">
+              <img class="logo" src="" alt="펫시터" />
+              <p class="footer__info">
+                "(펫)펫피플 주소 : 서울시 냥냥구 멍멍동 12-12 빌딩 3층 (주식회사
+                펫피플)"<br />
+                "사업자 등록번호 :
+                123-00-12345&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;통신판매업 신고
+                번호 : 제 2050-서울멍양-03319"<br />
+                "고객센터 문의 : 070 1234 5678 / catdog@grrrr.com"
+              </p>
+            </div>
+            <div class="footer__right">
+              <nav class="footer__nav">
+                <ul>
+                  <li><a href="/insurance">안전보상제도</a></li>
+                  <li><a href="/qna">질문과 답변</a></li>
+                  <li><a href="/terms">이용 약관</a></li>
+                </ul>
+              </nav>
+              <div class="footer__sns">
+                <ul class="fbx">
+                  <li>
+                    <a href="" class="sns__face" target="_blank">
+                      <i class="fab fa-facebook-square"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="sns__insta" target="_blank">
+                      <i class="fab fa-instagram-square"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
 </html>

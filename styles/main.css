@@ -1,0 +1,75 @@
+:root{
+    /* color */
+    --color-primary: #cc89df;
+    --color-white: #ffffff;
+    --color-light-white: #eeeeee;
+    --color-dark-white: #bdbdbd;
+    --color-pink: #fe918d;
+    --color-dark-pink: #ff6863;
+    --color-dark-grey: #4d4d4d;
+    --color-grey: #616161;
+    --color-light-grey: #7c7979;
+    --color-blue: #73aace;
+    --color-yellow: #fff7d1;
+    --color-orange: #feb546;
+    --color-black: #000000;
+
+    /* size */
+    --border-radius: 35px;
+}
+
+/* main */
+
+#main{
+    background: url(../video/main.mp4);
+}
+.main_container {
+    position: relative;
+    justify-content: center;
+}
+
+.main__title{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -30%);
+    color: var(--color-white);
+    letter-spacing: 2px;
+}
+
+.main__title span{
+    letter-spacing:5px;
+    line-height: 1.4;
+}
+
+@media only screen and (min-width: 1025px){
+    .fullpage{
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .fullpage .main_contents{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: all 560ms ease-out;
+    }   
+
+    section{
+        margin: 0;
+    }
+
+    .fullpage section{
+        height: 100vh;
+    }
+
+    .footer__inner{
+        top: 96%;
+        left: 0;
+        z-index: 2;
+    }
+
+}
+
