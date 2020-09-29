@@ -5,10 +5,10 @@ body{/* 400, 700, 800 */font-family: 'Nanum Gothic', sans-serif;}
 a{text-decoration: none;color: var(--color-black);}ul{list-style: none;}img{width: 100%;}
 video{width: 100vw;}button{background: transparent; cursor: pointer; border: none; outline: none;}
 .fbx{display: flex;align-items: center;}
-
+label{display: block;}
 .wrap{width: 100%;height: auto;}
 .container{margin: auto;max-width: 80%;}
-section{margin-top: 140px;}
+.mt{margin-top: 140px;}
 :root{
     /* color */
     --color-primary: #cc89df;
@@ -33,7 +33,7 @@ section{margin-top: 140px;}
 .title{font-size: 5rem;font-weight: 700;}
 .description{font-size: 1.5rem;}
 
-.text-lg{font-size: 5rem;font-weight: 700;color: #ffffff;}
+.text-lg{font-size: 3rem;font-weight: 700;}
 .text-md{font-size: 1rem;}
 .text-sm{font-size: 0.9rem;}
 
@@ -46,10 +46,10 @@ section{margin-top: 140px;}
     position: fixed;
     top: 80%;
     right: 10%;
-    font-size: 3.8rem;
-    line-height: 80px;
-    width: 80px;
-    height: 80px;
+    font-size: 2.5rem;
+    line-height: 60px;
+    width: 60px;
+    height: 60px;
     background: var(--color-primary);
     border-radius: 50%;
     color: var(--color-white);
@@ -64,4 +64,16 @@ section{margin-top: 140px;}
 .arrowUp.visible{
     opacity: 1;
     pointer-events: auto;
+}
+
+/* Button */
+
+.btn {
+    background-color: var(--color-primary);
+    opacity: 0.9;
+    padding: 0.6rem 1rem;
+    border-radius: var(--border-radius);
+    color: var(--color-white);
+    font-size: 1rem;
+    text-align: center;
 }
