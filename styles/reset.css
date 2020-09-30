@@ -5,11 +5,10 @@ body{/* 400, 700, 800 */font-family: 'Nanum Gothic', sans-serif;}
 a{text-decoration: none;color: var(--color-black);}ul{list-style: none;}img{width: 100%;}
 button{background: transparent; cursor: pointer; border: none; outline: none;}
 .fbx{display: flex;align-items: center;}
+video{width: 100vw;}
 label{display: block;}
-.wrap{width: 100vw;height: auto;}
-.container{width: 100vw; margin: auto;max-width: 80%;}
-.mt{padding-top: 140px;}
-section{padding: 5rem 0;}
+.container{width: 1400px; margin: 0 auto;max-width: 80%; padding: 80px 0;text-align: center;}
+
 :root{
     /* color */
     --color-primary: #dacdfa;
