@@ -26,13 +26,14 @@
 .main_container {
     position: relative;
     justify-content: center;
+    max-width: 80vw;
 }
 
 .main__title{
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 30%;
-    transform: translate(-50%, -30%);
+    transform: translate(-45%, -30%);
     color: var(--color-white);
     letter-spacing: 2px;
 }
@@ -45,26 +46,29 @@
 /* Service */
 
 #service{
-    margin: 2rem auto;
+    /* padding-top: 3rem; */
 }
+
 #service .container .text-lg{
     text-align: center;
+    line-height: 1.5;
 }
 .service__cards{
     margin-top: 2rem;
 }
 
 .card{
-    background: var(--color-light-white);
+    /* background: center/cover no-repeat url(../img/main-bg.png); */
+    background: #dacdfac7;
     text-align: center;
-    padding: 1rem 2rem;
+    padding: 1rem 4rem;
     margin: 0.4rem 0.2rem;
     transition: all 300ms ease-in;
 }
 
 .card__icon img{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     transition: all 300ms ease-in;
 }
 
@@ -82,12 +86,84 @@
 
 /* Price */
 #price{
-    margin: 2rem auto;
+    padding: 5rem 1rem;
+    background: var(--color-yellow);
+}
+
+#price .container{
+    justify-content: space-between;
+}
+.price__left{
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    position: relative;
+}
+
+.price__left .text-lg{
+    margin-bottom: 1rem;
+
+}
+
+.price__left .text-sm{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+}
+.price__right{
+    position: relative;
+}
+
+.price__card{
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    width: 50%;
+}
+
+.price__card.two{
+    position: absolute;
+    top: -20px;
+    right: -20px;
 }
 
 /* Petsitter */
 #petsitter{
-    margin: 2rem auto;
+    padding: 5rem 1rem;
+    background: url(../img/main_petsitter.png) no-repeat right/contain;
+}
+
+#petsitter .container{
+    justify-content: space-between;
+}
+.petsitter__left{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.petsitter__left .text-lg{
+    margin-bottom: 1rem;
+
+}
+
+.petsitter__right{
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.petsitter__left .text-sm{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+}
+
+.petsitter__card{ 
+    text-align: right;
+    position: relative;
+    top: 105px;
+    left: 0; 
+}
+
+.footer__inner{
+    height: 150px;
 }
 @media only screen and (min-width: 1025px){
     .fullpage{
@@ -105,7 +181,8 @@
     }   
 
     section{
-        margin: 0;
+        margin: 0 auto;
+        padding: 0;
     }
 
     .fullpage section{
@@ -113,7 +190,7 @@
     }
 
     .footer__inner{
-        display: fixed;
+        display: absolute;
         z-index: 1;
         justify-content: space-between;
         padding: 1rem;
@@ -122,11 +199,53 @@
         font-size: 0.9rem;
         top: 100%;
         left: 0;
-        transform: translateY(-150%);
+        transform: translateY(-100%);
     }
         
 
     .mt{padding-top: 0;}
+    #service{
+        padding-top: 7rem;
+        transform: translateX(8%);
+    } 
+    #price{
+        padding: 12rem 5rem;
+    }
+    #petsitter{
+        padding: 2rem 5rem;
+    }
+    .price__left{
+        white-space: nowrap;
+    }
 
+    .price__right{
+        position: relative;
+        left: 3rem;
+    }
+
+    .price__card{
+        width: 45%;
+    }
+    .price__card.two{
+        position: absolute;
+        top: -20px;
+        right: 70px;
+        transition: all 300ms ease-in-out;
+        transform: rotate(-5deg);
+    }
+
+    .price__card.one{
+        transition: all 300ms ease-in-out;
+        transform: rotate(5deg);
+        width: 40%;
+    }
+
+    .price__card.one:hover{
+        transform: scale(1.1) rotate(0deg);
+    }
+    
+    .price__card.two:hover{
+        transform: scale(1.1) rotate(0deg);
+    }
 }
 
