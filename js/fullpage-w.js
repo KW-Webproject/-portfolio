@@ -1,6 +1,5 @@
 window.addEventListener('load', () => {
     const reBtn = document.querySelector("#re-btn");
-    const reBtn2 = document.querySelector("#re-btn2");
     const content = document.querySelector(".contents");
     const sections = document.querySelectorAll("section");
 

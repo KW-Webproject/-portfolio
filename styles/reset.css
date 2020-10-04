@@ -7,6 +7,7 @@ button{background: transparent; cursor: pointer; border: none; outline: none;}
 .fbx{display: flex;align-items: center;}
 video{width: 100vw;}
 label{display: block;}
+section{padding: 3rem 0;}
 .container{width: 1400px; margin: 0 auto;max-width: 80%; padding: 80px 0;text-align: center;}
 
 :root{

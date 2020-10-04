@@ -41,6 +41,15 @@ form input{
     color: var(--color-dark-white);
 }
 
+.input__number{
+    width: 100px;
+    margin-right: 0;
+}
+
+.label--inline{
+    display: inline;
+}
+
 /* checkbox */
 
 .form__checkbox{

@@ -64,16 +64,24 @@
                                         </label>
                                     </div>
                                 </div>
-                                <label for="">주소<input type="text" name="address"></label>
+                                <label for="">주소<input type="text" name="address" required></label>
                                 <!-- 오늘 날짜 이후로 지정되게 js 필요!-->
-                                <label for="">날짜<input type="date" name="date"></label>
+                                <label for="">날짜<input type="date" name="date" required></label>
                                 <!-- 시간 입력하면 js가 변환 -->
                                 <!-- 시간은 30분 단위로 입력 가능합니다. => double check -->
-                                <label for="">시작시간<input type="time" value="09:00" min="09:00" max="18:00"
-                                        name="start-time"></label>
-                                <label for="">종료시간<input type="time" value="19:00" min="10:00" max="19:00"
-                                        name="end-time"></label>
-                                <button type="button" id="re-btn" class="btn btn-lg">예약하기</button>
+                                <label for="start-time">시작시간
+                                    <input type="number" id="start-time" class="input__number" name="start-time-h" step="1" value="09" min="09" max="18">
+                                    <label for="" class="label--inline">시</label>
+                                    <input type="number" id="start-time" class="input__number" name="start-time-m" step="30" value="00" max="30">
+                                    <label for="" class="label--inline">분</label>
+                                </label>
+                                <label for="end-time">종료시간
+                                    <input type="number" id="end-time" class="input__number" name="end-time-h" step="1" value="09" min="10" max="19">
+                                    <label for="" class="label--inline">시</label>
+                                    <input type="number" id="end-time" class="input__number" name="end-time-m" step="30" value="30" min="00">
+                                    <label for="" class="label--inline">분</label>
+                                </label>
+                                <button type="submit" id="re-btn" class="btn btn-lg">예약하기</button>
                             </form>
                         </section>
                     </div>
@@ -91,11 +99,8 @@
                                     <p class="text-sm">item X n시간</p>
                                     <p class="text-sm text-color">총 금액 : 10000000원</p>
                                 </div>
-                                <button type="button" class="btn btn-lg" id="re-btn2">
-                                    정보 수정
-                                </button>
                                 <button type="submit" class="btn btn-lg" id="payBtn">
-                                    <a href="./reservation_3.html">결제하기</a>
+                                    <a href="receipt.html">결제하기</a>
                                 </button>
                             </form>
                         </div>
