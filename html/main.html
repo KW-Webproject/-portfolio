@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/hd_tf.css">
+    <link rel="stylesheet" href="../styles/main_mask.css">
     <script src="../js/fullpage.js" def></script>
     <!-- 400, 700, 800 -->
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
@@ -29,16 +30,29 @@
                 </div>
             </header>
             <section id="main" class="fbx">
-                <div class="main_container container mt fbx">
+                <div class="main_container mt fbx">
                     <video autoplay muted loop>
                         <source src="../video/main.mp4" type="video/mp4">
                     </video>
-                    <h1 class="main__title title">펫시터가<br>"집으로"<br>와요.</h1>
+                    <div class="txt--mask main__title one title">
+                        <span>펫시터가</span>
+                        <span class="mask"></span>
+                    </div>
+                    <div class="txt--mask main__title two title">
+                        <span>집으로</span>
+                        <span class="mask"></span>
+                    </div>
+                    <div class="txt--mask main__title three title">
+                        <span>와요!</span>
+                        <span class="mask"></span>
+                    </div>
+                    <!-- <h1 class="main__title title">펫시터가<br>"집으로"<br>와요.</h1> -->
                 </div>
             </section>
             <section id="service">
                 <div class="container fbx">
-                    <h1 class="text-lg">믿을 수 있고,<br>안심할 수 있어요</h1>
+                    <h1 class="title dark">믿을 수 있고,<br>안심할 수 있어요</h1>
+                    <a href="service.html" class="btn btn-lg">자세히 보러가기 >></a>
                     <!-- 반응형웹때는 fbx 적용 X -->
                     <div class="service__cards fbx">
                         <div class="card-top fbx">
@@ -81,10 +95,10 @@
             <section id="price">
                 <div class="container fbx">
                     <div class="price__left fbx">
-                        <h1 class="text-lg">방문 서비스를 살펴보세요</h1>
+                        <h1 class="title dark">방문 서비스를<br> 살펴보세요</h1>
                         <p class="text-sm">산책, 돌봄에는 30분부터 2시간까지<br>
                             시간별 맞춤 플랜이 준비되어 있어요</p>
-                        <a href="reservation.html" class="btn btn-lg">예약하러 가기</a>
+                        <a href="reservation.html" class="btn btn-lg">예약하러 가기 >></a>
                     </div>
                     <div class="price__right fbx">
                         <div class="price__card one">
@@ -99,10 +113,10 @@
             <section id="petsitter" class="fbx">
                 <div class="container fbx">
                     <div class="petsitter__left fbx">
-                        <h1 class="text-lg">PETLAND의 <br> 펫시터로 지원하면,</h1>
+                        <h1 class="title dark">PETLAND의 <br> 펫시터로 지원하면,</h1>
                         <p class="text-sm">시간당 최대 2만원이 넘는 수익 창출과<br>
                             원하는 날과 시간만 자유롭게 일할 수 있할 수 있어요.</p>
-                        <a href="apply.html" class="btn btn-lg">자세히 보기</a>
+                        <a href="apply.html" class="btn btn-lg">자세히 보기 >></a>
                     </div>
                     <div class="petsitter__right fbx">
                         <div class="petsitter__card">
@@ -151,6 +165,19 @@
     </div>
 
     <button class="arrowUp" data-link="#main"><i class="fas fa-arrow-up"></i></button>
+    <script>
+        
+        const masks = document.querySelectorAll('.main_container .txt--mask');
+
+        window.addEventListener('load', ()=>{
+            // let i = 0;
+            // setTimeout((i)=>{
+            //         masks[i].classList.add('active');
+            //         i += 1;
+            // }, 200);
+            masks.forEach((mask)=>{mask.classList.add('active');}, 100);
+        });
+    </script>
 </body>
 
 </html>

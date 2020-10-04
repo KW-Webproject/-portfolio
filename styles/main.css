@@ -10,7 +10,8 @@
     --color-grey: #616161;
     --color-light-grey: #7c7979;
     --color-blue: #73aace;
-    --color-yellow: #fff7d1;
+    /* --color-yellow: #fff7d1; */
+    --color-yellow: #FFFFF2;
     --color-orange: #feb546;
     --color-black: #000000;
 
@@ -27,13 +28,32 @@
     position: relative;
     justify-content: center;
     max-width: 80vw;
+    margin: auto;
 }
 
-.main__title{
+.main__title.one{
     position: absolute;
-    top: 45%;
-    left: 30%;
-    transform: translate(-45%, -30%);
+    top: 35%;
+    left: 120px;
+    transform: translateY(-35%);
+    color: var(--color-white);
+    letter-spacing: 2px;
+}
+
+.main__title.two{
+    position: absolute;
+    top: 52%;
+    left: 120px;
+    transform: translateY(-52%);
+    color: var(--color-white);
+    letter-spacing: 2px;
+}
+
+.main__title.three{
+    position: absolute;
+    top: 69%;
+    left: 120px;
+    transform: translateY(-69%);
     color: var(--color-white);
     letter-spacing: 2px;
 }
@@ -48,18 +68,19 @@
 #service .container{
     flex-direction: column;
 }
-#service .container .text-lg{
+#service .container .title{
     text-align: center;
     line-height: 1.5;
+    margin-bottom: 1.5rem;
 }
 .service__cards{
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     flex-direction: column;
 }
 
 .card{
     /* background: center/cover no-repeat url(../img/main-bg.png); */
-    background: #dacdfac7;
+    background: rgba(226, 216, 251, 0.5);
     text-align: center;
     padding: 1rem 4rem;
     transition: all 300ms ease-in;
@@ -103,7 +124,7 @@
     align-items: flex-start;
 }
 
-.price__left .text-lg{
+.price__left .title{
     margin-bottom: 1rem;
 }
 
@@ -156,8 +177,9 @@
     flex: 0.4;
 }
 
-.petsitter__left .text-lg{
+.petsitter__left .title{
     margin-bottom: 1rem;
+    text-align: left;
 }
 
 .petsitter__right{
@@ -170,6 +192,7 @@
     font-size: 1.1rem;
     line-height: 1.5;
     margin-bottom: 3rem;
+    text-align: left;
 }
 
 .petsitter__card{ 

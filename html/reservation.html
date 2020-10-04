@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petland - 예약</title>
     <script src="https://kit.fontawesome.com/ab5060240a.js" crossorigin="anonymous"></script>
@@ -50,35 +50,34 @@
                                 <div class="form__checkbox fbx">
                                     <label class="question">서비스</label>
                                     <div class="checkbox">
-                                        <input type="checkbox" name="service" value="walking" id="walking" checked>
+                                        <input type="checkbox" name="service" value="walking" id="walking" checked />
                                         <label for="walking">
                                             <div class="chk_img chk_img_1"></div>
                                             <span class="text-sm">도그워킹</span>
                                         </label>
                                     </div>
                                     <div class="checkbox">
-                                        <input type="checkbox" name="service" value="care" id="care">
+                                        <input type="checkbox" name="service" value="care" id="care" />
                                         <label for="care">
                                             <div class="chk_img chk_img_2"></div>
                                             <span class="text-sm">방문돌봄</span>
                                         </label>
                                     </div>
                                 </div>
-                                <label for="">주소<input type="text" name="address" required></label>
+                                <label for="">주소<input type="text" name="address" required /></label>
                                 <!-- 오늘 날짜 이후로 지정되게 js 필요!-->
-                                <label for="">날짜<input type="date" name="date" required></label>
-                                <!-- 시간 입력하면 js가 변환 -->
-                                <!-- 시간은 30분 단위로 입력 가능합니다. => double check -->
+                                <label for="">날짜<input type="date" name="date" required /></label>
+                                <!-- 시간 입력하면 js가 변환 ? -->
                                 <label for="start-time">시작시간
-                                    <input type="number" id="start-time" class="input__number" name="start-time-h" step="1" value="09" min="09" max="18">
+                                    <input type="number" id="start-time" class="input__number" name="start-time-h" step="1" placeholder="09" min="09" max="18" required />
                                     <label for="" class="label--inline">시</label>
-                                    <input type="number" id="start-time" class="input__number" name="start-time-m" step="30" value="00" max="30">
+                                    <input type="number" id="start-time" class="input__number" name="start-time-m" step="30" placeholder="00" max="30" required />
                                     <label for="" class="label--inline">분</label>
                                 </label>
                                 <label for="end-time">종료시간
-                                    <input type="number" id="end-time" class="input__number" name="end-time-h" step="1" value="09" min="10" max="19">
+                                    <input type="number" id="end-time" class="input__number" name="end-time-h" step="1" placeholder="09" min="10" max="19" required />
                                     <label for="" class="label--inline">시</label>
-                                    <input type="number" id="end-time" class="input__number" name="end-time-m" step="30" value="30" min="00">
+                                    <input type="number" id="end-time" class="input__number" name="end-time-m" step="30" placeholder="30" min="00" required />
                                     <label for="" class="label--inline">분</label>
                                 </label>
                                 <button type="submit" id="re-btn" class="btn btn-lg">예약하기</button>
@@ -89,9 +88,9 @@
                     <section id="input-form">
                         <div class="form__inner container">
                             <form action="" method="POST">
-                                <label for="">이름<input type="text" name="name" required></label>
+                                <label for="">이름<input type="text" name="name" required /></label>
                                 <div class="fbx call">
-                                    <label for="">연락처<input type="tel" name="tel" required></label>
+                                    <label for="">연락처<input type="tel" name="tel" required /></label>
                                     <button type="button" class="btn text-sm" id="alert">인증</button>
                                 </div>
                                 <hr>
