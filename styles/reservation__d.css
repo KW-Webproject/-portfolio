@@ -17,24 +17,6 @@
     /* size */
     --border-radius: 35px;
 }
-
-/* Intro */
-#intro{
-    padding-top: 120px;
-}
-
-#intro .container{
-    justify-content: center;
-}
-.intro__left .title{
-    text-align: left;
-    margin-bottom: 1rem;
-}
-
-.intro__left .text-md{
-    text-align: left;
-}
-/* Contents */
 #input-form{
     background: var(--color-yellow);
     width: 100vw;
@@ -115,21 +97,6 @@ label .chk_img_2{
 .call .btn{
     margin: 0;
 }
-
-hr {
-   border: 4px double var(--color-white);
-   opacity: 0.5;
-}
-/* 
-.hr:after{
-    content: "";
-    display: block;
-    width: 500px;
-    border-bottom: 2px dotted var(--color-primary);
-    opacity: 0.7;
-    position: relative;
-} */
-
 /* form-button */
 
 form button{
@@ -142,3 +109,15 @@ form button{
 .btn > a{
     color: white;
 }
+
+/* Width Fullpage */
+
+.width-fullpage{
+    width: 100vw;
+    overflow-x: hidden;
+    transition: all 560ms ease-in-out;
+}
+
+section{
+    margin: 0;
+} 

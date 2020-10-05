@@ -43,7 +43,7 @@
                         <span class="mask"></span>
                     </div>
                     <div class="txt--mask main__title three title">
-                        <span>와요!</span>
+                        <span class="text-primary">와요!</span>
                         <span class="mask"></span>
                     </div>
                     <!-- <h1 class="main__title title">펫시터가<br>"집으로"<br>와요.</h1> -->
@@ -166,16 +166,16 @@
 
     <button class="arrowUp" data-link="#main"><i class="fas fa-arrow-up"></i></button>
     <script>
-        
+
         const masks = document.querySelectorAll('.main_container .txt--mask');
 
-        window.addEventListener('load', ()=>{
+        window.addEventListener('load', () => {
             // let i = 0;
             // setTimeout((i)=>{
             //         masks[i].classList.add('active');
             //         i += 1;
             // }, 200);
-            masks.forEach((mask)=>{mask.classList.add('active');}, 100);
+            masks.forEach((mask) => { mask.classList.add('active'); }, 100);
         });
     </script>
 </body>

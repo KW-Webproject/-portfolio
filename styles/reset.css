@@ -41,7 +41,7 @@ section{padding: 3rem 0;}
 
 .bd{font-weight: 700;}
 .extra-bd{font-weight: 800;}
-.text-primary{font-weight: 700;color:#cc89df;} 
+.text-primary{color:var(--color-primary);} 
 
 /* arrow button */
 .arrowUp{

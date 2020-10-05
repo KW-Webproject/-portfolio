@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petland - 예약</title>
+    <script src="https://kit.fontawesome.com/ab5060240a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/reservation.css">
+    <link rel="stylesheet" href="../styles/hd_tf.css">
+    <script src="../js/fullpage-w.js" def></script>
+    <script src="https://kit.fontawesome.com/72c88d65e7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header id="header">
+            <header id="header">
+                <div class="header__inner fbx">
+                    <a href="main.html"><img src="../img/logo.png" alt="logo" class="header__logo"></a>
+                    <ul class="header__menu fbx text-md">
+                        <li class="header__menu__item"><a href="main.html">홈</a></li>
+                        <li class="header__menu__item"><a href="service.html">서비스 소개</a></li>
+                        <li class="header__menu__item selected"><a href="reservation.html">예약하기</a></li>
+                        <li class="header__menu__item"><a class="text-primary bd" href="apply.html">펫시터 지원</a></li>
+                    </ul>
+                </div>
+            </header>
+            <section class="intro">
+                <div class="container fbx mt">
+                    <div class="intro__left">
+                        <h1 class="text-lg">Lorem ipsum dolor,<br> sit amet consectetur</h1>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, saepe.
+                        </p>
+                    </div>
+                    <div class="intro__right">
+                        <div class="intro__img">
+                            <img src="../img/reservation.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="width-fullpage">
+                <div class="contents fbx">
+                    <!-- 첫번째 폼 -->
+                    <div id="input-form">
+                        <section class="form__inner container">
+                            <form action="" method="POST">
+                                <div class="form__checkbox fbx">
+                                    <label class="question">서비스</label>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="service" value="walking" id="walking" checked />
+                                        <label for="walking">
+                                            <div class="chk_img chk_img_1"></div>
+                                            <span class="text-sm">도그워킹</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="service" value="care" id="care" />
+                                        <label for="care">
+                                            <div class="chk_img chk_img_2"></div>
+                                            <span class="text-sm">방문돌봄</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <label for="">주소<input type="text" name="address" required /></label>
+                                <!-- 오늘 날짜 이후로 지정되게 js 필요!-->
+                                <label for="">날짜<input type="date" name="date" required /></label>
+                                <!-- 시간 입력하면 js가 변환 ? -->
+                                <label for="start-time">시작시간
+                                    <input type="number" id="start-time" class="input__number" name="start-time-h" step="1" placeholder="09" min="09" max="18" required />
+                                    <label for="" class="label--inline">시</label>
+                                    <input type="number" id="start-time" class="input__number" name="start-time-m" step="30" placeholder="00" max="30" required />
+                                    <label for="" class="label--inline">분</label>
+                                </label>
+                                <label for="end-time">종료시간
+                                    <input type="number" id="end-time" class="input__number" name="end-time-h" step="1" placeholder="09" min="10" max="19" required />
+                                    <label for="" class="label--inline">시</label>
+                                    <input type="number" id="end-time" class="input__number" name="end-time-m" step="30" placeholder="30" min="00" required />
+                                    <label for="" class="label--inline">분</label>
+                                </label>
+                                <button type="submit" id="re-btn" class="btn btn-lg">예약하기</button>
+                            </form>
+                        </section>
+                    </div>
+                    <!-- 두번째 form -->
+                    <section id="input-form">
+                        <div class="form__inner container">
+                            <form action="" method="POST">
+                                <label for="">이름<input type="text" name="name" required /></label>
+                                <div class="fbx call">
+                                    <label for="">연락처<input type="tel" name="tel" required /></label>
+                                    <button type="button" class="btn text-sm" id="alert">인증</button>
+                                </div>
+                                <hr>
+                                <div class="receipt">
+                                    <p class="text-sm">item X n시간</p>
+                                    <p class="text-sm text-color">총 금액 : 10000000원</p>
+                                </div>
+                                <button type="submit" class="btn btn-lg" id="payBtn">
+                                    <a href="receipt.html">결제하기</a>
+                                </button>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <footer id="footer">
+                <div class="fbx footer__inner">
+                    <div class="footer__left">
+                        <img class="logo" src="" alt="펫시터">
+                        <p class="footer__info">
+                            "(펫)펫피플 주소 : 서울시 냥냥구 멍멍동 12-12 빌딩 3층 (주식회사 펫피플)"<br>
+                            "사업자 등록번호 : 123-00-12345&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;통신판매업 신고 번호 : 제
+                            2050-서울멍양-03319"<br>
+                            "고객센터 문의 : 070 1234 5678 / catdog@grrrr.com"
+                        </p>
+                    </div>
+                    <div class="footer__right">
+                        <nav class="footer__nav">
+                            <ul>
+                                <li><a href="/insurance">안전보상제도</a> </li>
+                                <li><a href="/qna">질문과 답변</a> </li>
+                                <li><a href="/terms">이용 약관</a></li>
+                            </ul>
+                        </nav>
+                        <div class="footer__sns">
+                            <ul class="fbx">
+                                <li>
+                                    <a href="" class="sns__face" target="_blank">
+                                        <i class="fab fa-facebook-square"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="sns__insta" target="_blank">
+                                        <i class="fab fa-instagram-square"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+    </div>
+</body>
+
+</html>
