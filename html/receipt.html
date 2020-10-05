@@ -7,9 +7,8 @@
     <title>Petland - 예약</title>
     <script src="https://kit.fontawesome.com/ab5060240a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/reservation.css">
+    <link rel="stylesheet" href="../styles/receipt.css">
     <link rel="stylesheet" href="../styles/hd_tf.css">
-    <script src="../js/fullpage-w.js" def></script>
     <script src="https://kit.fontawesome.com/72c88d65e7.js" crossorigin="anonymous"></script>
 </head>
 
@@ -27,11 +26,14 @@
                     </ul>
                 </div>
             </header>
-            <section class="intro">
+            <section id="intro">
                 <div class="container fbx mt">
                     <div class="intro__left">
-                        <h1 class="text-lg">Lorem ipsum dolor,<br> sit amet consectetur</h1>
-                        <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, saepe.
+                        <h1 class="title dark">반려인의<br>달라진 일상</h1>
+                        <p class="text-md">
+                            '와요' 펫시터와 함께하는 일상을 시작해보세요. <br>
+                            반려동물에게는 펫시터와 함께하는 즐거운 시간이,<br>
+                            보호자님께는 걱정없는 하루가 펼쳐질 거예요.
                         </p>
                     </div>
                     <div class="intro__right">
@@ -41,75 +43,26 @@
                     </div>
                 </div>
             </section>
-            <div class="width-fullpage">
-                <div class="contents fbx">
-                    <!-- 첫번째 폼 -->
-                    <div id="input-form">
-                        <section class="form__inner container">
-                            <form action="" method="POST">
-                                <div class="form__checkbox fbx">
-                                    <label class="question">서비스</label>
-                                    <div class="checkbox">
-                                        <input type="checkbox" name="service" value="walking" id="walking" checked />
-                                        <label for="walking">
-                                            <div class="chk_img chk_img_1"></div>
-                                            <span class="text-sm">도그워킹</span>
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <input type="checkbox" name="service" value="care" id="care" />
-                                        <label for="care">
-                                            <div class="chk_img chk_img_2"></div>
-                                            <span class="text-sm">방문돌봄</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <label for="">주소<input type="text" name="address" required /></label>
-                                <!-- 오늘 날짜 이후로 지정되게 js 필요!-->
-                                <label for="">날짜<input type="date" name="date" required /></label>
-                                <!-- 시간 입력하면 js가 변환 ? -->
-                                <label for="start-time">시작시간
-                                    <input type="number" id="start-time" class="input__number" name="start-time-h"
-                                        step="1" placeholder="09" min="09" max="18" required />
-                                    <label for="" class="label--inline">시</label>
-                                    <input type="number" id="start-time" class="input__number" name="start-time-m"
-                                        step="30" placeholder="00" max="30" required />
-                                    <label for="" class="label--inline">분</label>
-                                </label>
-                                <label for="end-time">종료시간
-                                    <input type="number" id="end-time" class="input__number" name="end-time-h" step="1"
-                                        placeholder="09" min="10" max="19" required />
-                                    <label for="" class="label--inline">시</label>
-                                    <input type="number" id="end-time" class="input__number" name="end-time-m" step="30"
-                                        placeholder="30" min="00" required />
-                                    <label for="" class="label--inline">분</label>
-                                </label>
-                                <button type="submit" id="re-btn" class="btn btn-lg">예약하기</button>
-                            </form>
-                        </section>
-                    </div>
-                    <!-- 두번째 form -->
-                    <section id="input-form">
-                        <div class="form__inner container">
-                            <form action="" method="POST">
-                                <label for="">이름<input type="text" name="name" required /></label>
-                                <div class="fbx call">
-                                    <label for="">연락처<input type="tel" name="tel" required /></label>
-                                    <button type="button" class="btn text-sm" id="alert">인증</button>
-                                </div>
-                                <hr>
-                                <div class="receipt">
-                                    <p class="text-sm">item X n시간</p>
-                                    <p class="text-sm text-color">총 금액 : 10000000원</p>
-                                </div>
-                                <button type="submit" class="btn btn-lg" id="payBtn">
-                                    <a href="receipt.html">결제하기</a>
-                                </button>
-                            </form>
-                        </div>
-                    </section>
+            <section id="receipt">
+                <div class="container">
+                    <table class="table bd">
+                        <tbody>
+                            <tr>
+                                <td>10.05</td>
+                                <td>도그워킹 & 방문돌봄</td>
+                            </tr>
+                            <tr>
+                                <td>12:00 - 14:00</td>
+                                <td>서울시 관악구 한국정보교육원 602호</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="cost">19000 * 2 = Total \38000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="#" class="btn btn-lg">결제하기</a>
                 </div>
-            </div>
+            </section>
             <footer id="footer">
                 <div class="fbx footer__inner">
                     <div class="footer__left">
