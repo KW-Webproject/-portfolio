@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petland</title>
     <script src="https://kit.fontawesome.com/ab5060240a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/hd_tf.css">
-    <link rel="stylesheet" href="../styles/main_mask.css">
-    <script src="../js/fullpage.js" def></script>
+    <link rel="stylesheet" href="../static/styles/reset.css">
+    <link rel="stylesheet" href="../static/styles/main.css">
+    <link rel="stylesheet" href="../static/styles/hd_tf.css">
+    <link rel="stylesheet" href="../static/styles/main_mask.css">
+    <script src="../static/js/fullpage.js" def></script>
     <!-- 400, 700, 800 -->
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
@@ -20,19 +20,19 @@
         <div class="main_contents">
             <header id="header">
                 <div class="header__inner fbx">
-                    <a href="main.html"><img src="../img/logo.png" alt="logo" class="header__logo"></a>
+                    <a href="/"><img src="../static/img/logo.png" alt="logo" class="header__logo"></a>
                     <ul class="header__menu fbx text-md">
-                        <li class="header__menu__item selected"><a href="main.html">홈</a></li>
-                        <li class="header__menu__item"><a href="service.html">서비스 소개</a></li>
-                        <li class="header__menu__item"><a href="reservation.html">예약하기</a></li>
+                        <li class="header__menu__item selected"><a href="/">홈</a></li>
+                        <li class="header__menu__item"><a href="/service">서비스 소개</a></li>
+                        <li class="header__menu__item"><a href="/reservation">예약하기</a></li>
                         <li class="header__menu__item"><a class="text-primary bd" href="apply.html">펫시터 지원</a></li>
                     </ul>
                 </div>
             </header>
             <section id="main" class="fbx">
-                <div class="main_container mt fbx">
+                <div class="main_container mt fbx"
                     <video autoplay muted loop>
-                        <source src="../video/main.mp4" type="video/mp4">
+                        <source src="../static/video/main.mp4" type="video/mp4">
                     </video>
                     <div class="txt--mask main__title one title">
                         <span>펫시터가</span>
@@ -57,14 +57,14 @@
                     <div class="service__cards fbx">
                         <div class="card-top fbx">
                             <div class="card">
-                                <div class="card__icon"><img src="../img/main_service1.png" alt=""></div>
+                                <div class="card__icon"><img src="../static/img/main_service1.png" alt=""></div>
                                 <div class="card__description">
                                     <p class="text-md extra-bd">4단계 신원 검증</p>
                                     <p class="text-sm">신분증 사본 제출, 등본 인증, 신원보증, 펫시터 계약서로 신원을 4단계 검증합니다.</p>
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="card__icon"><img src="../img/main_service3.png" alt=""></div>
+                                <div class="card__icon"><img src="../static/img/main_service3.png" alt=""></div>
                                 <div class="card__description">
                                     <p class="text-md extra-bd">모든 돌봄 과정 촬영</p>
                                     <p class="text-sm">펫시터의 카메라 착용을 의무화하고 있으며
@@ -74,7 +74,7 @@
                         </div>
                         <div class="card-bottom fbx">
                             <div class="card">
-                                <div class="card__icon"><img src="../img/main_service2.png" alt=""></div>
+                                <div class="card__icon"><img src="../static/img/main_service2.png" alt=""></div>
                                 <div class="card__description">
                                     <p class="text-md extra-bd">최고 전문진과 교육 협업</p>
                                     <p class="text-sm">TV 동물농장 출연중이신 송종천 대표님과
@@ -82,7 +82,7 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="card__icon"><img src="../img/main_service4.png" alt=""></div>
+                                <div class="card__icon"><img src="../static/img/main_service4.png" alt=""></div>
                                 <div class="card__description">
                                     <p class="text-md extra-bd">안전 보상 프로그램</p>
                                     <p class="text-sm">서비스 이용중 예상치 못한 문제 발생시 체계적인 안전 보상 프로그램이 적용됩니다.</p>
@@ -102,10 +102,10 @@
                     </div>
                     <div class="price__right fbx">
                         <div class="price__card one">
-                            <img src="../img/main_price1.png" alt="price image">
+                            <img src="../static/img/main_price1.png" alt="price image">
                         </div>
                         <div class="price__card two">
-                            <img src="../img/main_price2.png" alt="price image">
+                            <img src="../static/img/main_price2.png" alt="price image">
                         </div>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                     </div>
                     <div class="petsitter__right fbx">
                         <div class="petsitter__card">
-                            <img src="../img/dogcat.png" alt="petsitter image">
+                            <img src="../static/img/dogcat.png" alt="petsitter image">
                         </div>
                     </div>
                 </div>
