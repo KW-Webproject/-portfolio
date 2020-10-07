@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/styles/reset.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                <img src="../static/img/logo.png" alt="logo">
+            </div>
+            <nav class="header__nav ">
+                <ul class="nav__menu text-sm">
+                    <li class="nav__item"><a href="#">홈</a></li>
+                    <li class="nav__item"><a href="#">서비스 소개</a></li>
+                    <li class="nav__item"><a href="#">예약하기</a></li>
+                    <li class="nav__item"><a href="#">예약 확인</a></li>
+                    <li class="nav__item"><a href="#">연락하기</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    {% block section %}
+    {% endblock %}
+    <footer id="footer">
+        <div class="footer__inner">
+            <div class="footer__left">
+                <p class="text-sm">펫랜드</p>
+                <p class="footer__info">
+                    "(펫)펫피플 주소 : 서울시 냥냥구 멍멍동 12-12 빌딩 3층 (주식회사 펫피플)"<br>
+                    "사업자 등록번호 : 123-00-12345&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;통신판매업 신고 번호 : 제
+                    2050-서울멍양-03319"<br>
+                    "고객센터 문의 : 070 1234 5678 / catdog@grrrr.com"
+                </p>
+            </div>
+            <div class="footer__right">
+                <nav class="footer__nav">
+                    <ul class="text-sm">
+                        <li><a href="#">안전보상제도</a> </li>
+                        <li><a href="#">질문과 답변</a> </li>
+                        <li><a href="#">이용 약관</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__sns">
+                    <ul class="fbx">
+                        <li>
+                            <a href="" class="sns__face" target="_blank">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="sns__insta" target="_blank">
+                                <i class="fab fa-instagram-square"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

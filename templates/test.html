@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- javascript form test page -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/styles/reset.css">
+</head>
+
+<body>
+    <input type="text" id="name" name="name">
+    <button type="button" id="checkBtn">check</button>
+    <button type="submit" id="submitBtn">submit</button>
+    <input type="hidden">
+
+    <script>
+        const checkBtn = document.querySelector("#checkBtn");
+        const submitBtn = document.querySelector("#submitBtn");
+        const input = document.querySelector("#name");
+        let inputValue;
+        let commit = false; // true가 되어야 submitBtn 작동
+
+        checkBtn.addEventListener("click", () => {
+            inputValue = document.querySelector("#name").value;
+            checkIdLength(inputValue);
+            checkIdFirst(inputValue);
+        });
+
+        submitBtn.addEventListener("click", () => {
+            if (!commit) {
+                alert("아이디 확인을 눌러주세요.");
+                input.value = " ";
+            } else {
+                inputValue = document.querySelector("#name").value;
+                console.log(inputValue);
+                commitDB(inputValue);
+            }
+        });
+
+        function checkIdLength(id) {
+            if (id.length < 5) {
+                alert("5자 이상을 입력해주세요.");
+                input.value = " ";
+            }
+        }
+
+        function checkIdFirst(id) {
+            // console.log(id[0]);
+            // console.log(isNaN(id[0]));
+            if (!isNaN(id[0])) {
+                alert("첫번째 글자는 문자를 입력해주세요.");
+                input.value = " ";
+            } else {
+                commit = true;
+            }
+        }
+
+        function commitDB(id) {
+            console.log("successed!");
+        }
+
+    </script>
+</body>
+
+</html>

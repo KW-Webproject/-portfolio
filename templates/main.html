@@ -9,159 +9,158 @@
     <link rel="stylesheet" href="../static/styles/reset.css">
     <link rel="stylesheet" href="../static/styles/main.css">
     <link rel="stylesheet" href="../static/styles/hd_tf.css">
-    <link rel="stylesheet" href="../static/styles/main_mask.css">
+    <!-- <link rel="stylesheet" href="../static/styles/main_mask.css"> -->
     <script src="../static/js/fullpage.js" def></script>
-    <!-- 400, 700, 800 -->
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <!-- 100,300,400,500,700 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <div class="wrap fullpage">
-        <div class="main_contents">
-            <header id="header">
-                <div class="header__inner fbx">
-                    <a href="/"><img src="../static/img/logo.png" alt="logo" class="header__logo"></a>
-                    <ul class="header__menu fbx text-md">
-                        <li class="header__menu__item selected"><a href="/">홈</a></li>
-                        <li class="header__menu__item"><a href="/service">서비스 소개</a></li>
-                        <li class="header__menu__item"><a href="/reservation">예약하기</a></li>
-                        <li class="header__menu__item"><a class="text-primary bd" href="apply.html">펫시터 지원</a></li>
-                    </ul>
+    <div class="wrap">
+        <header id="header">
+            <div class="header__inner">
+                <a href="/"><img src="../static/img/logo.png" alt="logo" class="header__logo"></a>
+                <ul class="header__menu text-md">
+                    <li class="header__menu__item selected"><a href="/">홈</a></li>
+                    <li class="header__menu__item"><a href="/service">서비스 소개</a></li>
+                    <li class="header__menu__item"><a href="/reservation">예약하기</a></li>
+                    <li class="header__menu__item"><a class="text-primary bd" href="apply.html">펫시터 지원</a></li>
+                </ul>
+            </div>
+        </header>
+        <section id="main" class="fbx">
+            <div class="main_container mt fbx"><video autoplay muted loop>
+                    <source src="../static/video/main.mp4" type="video/mp4">
+                </video>
+                <div class="txt--mask main__title one title">
+                    <span>펫시터가</span>
+                    <span class="mask"></span>
                 </div>
-            </header>
-            <section id="main" class="fbx">
-                <div class="main_container mt fbx"
-                    <video autoplay muted loop>
-                        <source src="../static/video/main.mp4" type="video/mp4">
-                    </video>
-                    <div class="txt--mask main__title one title">
-                        <span>펫시터가</span>
-                        <span class="mask"></span>
-                    </div>
-                    <div class="txt--mask main__title two title">
-                        <span>집으로</span>
-                        <span class="mask"></span>
-                    </div>
-                    <div class="txt--mask main__title three title">
-                        <span class="text-primary">와요!</span>
-                        <span class="mask"></span>
-                    </div>
-                    <!-- <h1 class="main__title title">펫시터가<br>"집으로"<br>와요.</h1> -->
+                <div class="txt--mask main__title two title">
+                    <span>집으로</span>
+                    <span class="mask"></span>
                 </div>
-            </section>
-            <section id="service">
-                <div class="container fbx">
-                    <h1 class="title dark">믿을 수 있고,<br>안심할 수 있어요</h1>
-                    <a href="service.html" class="btn btn-lg">자세히 보러가기 >></a>
-                    <!-- 반응형웹때는 fbx 적용 X -->
-                    <div class="service__cards fbx">
-                        <div class="card-top fbx">
-                            <div class="card">
-                                <div class="card__icon"><img src="../static/img/main_service1.png" alt=""></div>
-                                <div class="card__description">
-                                    <p class="text-md extra-bd">4단계 신원 검증</p>
-                                    <p class="text-sm">신분증 사본 제출, 등본 인증, 신원보증, 펫시터 계약서로 신원을 4단계 검증합니다.</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card__icon"><img src="../static/img/main_service3.png" alt=""></div>
-                                <div class="card__description">
-                                    <p class="text-md extra-bd">모든 돌봄 과정 촬영</p>
-                                    <p class="text-sm">펫시터의 카메라 착용을 의무화하고 있으며
-                                        모든 과정이 촬영되어 실시간으로 중계됩니다</p>
-                                </div>
+                <div class="txt--mask main__title three title">
+                    <span class="text-primary">와요!</span>
+                    <span class="mask"></span>
+                </div>
+                <!-- <h1 class="main__title title">펫시터가<br>"집으로"<br>와요.</h1> -->
+            </div>
+        </section>
+        <section id="service">
+            <div class="container fbx">
+                <h1 class="title dark">믿을 수 있고,<br>안심할 수 있어요</h1>
+                <a href="service.html" class="btn btn-lg">자세히 보러가기 >></a>
+                <!-- 반응형웹때는 fbx 적용 X -->
+                <div class="service__cards fbx">
+                    <div class="card-top fbx">
+                        <div class="card">
+                            <div class="card__icon"><img src="../static/img/main_service1.png" alt=""></div>
+                            <div class="card__description">
+                                <p class="text-md extra-bd">4단계 신원 검증</p>
+                                <p class="text-sm">신분증 사본 제출, 등본 인증, 신원보증, 펫시터 계약서로 신원을 4단계 검증합니다.</p>
                             </div>
                         </div>
-                        <div class="card-bottom fbx">
-                            <div class="card">
-                                <div class="card__icon"><img src="../static/img/main_service2.png" alt=""></div>
-                                <div class="card__description">
-                                    <p class="text-md extra-bd">최고 전문진과 교육 협업</p>
-                                    <p class="text-sm">TV 동물농장 출연중이신 송종천 대표님과
-                                        펫시터 이론 및 실습 교육을 협업하고 있습니다</p>
-                                </div>
+                        <div class="card">
+                            <div class="card__icon"><img src="../static/img/main_service3.png" alt=""></div>
+                            <div class="card__description">
+                                <p class="text-md extra-bd">모든 돌봄 과정 촬영</p>
+                                <p class="text-sm">펫시터의 카메라 착용을 의무화하고 있으며
+                                    모든 과정이 촬영되어 실시간으로 중계됩니다</p>
                             </div>
-                            <div class="card">
-                                <div class="card__icon"><img src="../static/img/main_service4.png" alt=""></div>
-                                <div class="card__description">
-                                    <p class="text-md extra-bd">안전 보상 프로그램</p>
-                                    <p class="text-sm">서비스 이용중 예상치 못한 문제 발생시 체계적인 안전 보상 프로그램이 적용됩니다.</p>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="card-bottom fbx">
+                        <div class="card">
+                            <div class="card__icon"><img src="../static/img/main_service2.png" alt=""></div>
+                            <div class="card__description">
+                                <p class="text-md extra-bd">최고 전문진과 교육 협업</p>
+                                <p class="text-sm">TV 동물농장 출연중이신 송종천 대표님과
+                                    펫시터 이론 및 실습 교육을 협업하고 있습니다</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__icon"><img src="../static/img/main_service4.png" alt=""></div>
+                            <div class="card__description">
+                                <p class="text-md extra-bd">안전 보상 프로그램</p>
+                                <p class="text-sm">서비스 이용중 예상치 못한 문제 발생시 체계적인 안전 보상 프로그램이 적용됩니다.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section id="price">
-                <div class="container fbx">
-                    <div class="price__left fbx">
-                        <h1 class="title dark">방문 서비스를<br> 살펴보세요</h1>
-                        <p class="text-sm">산책, 돌봄에는 30분부터 2시간까지<br>
-                            시간별 맞춤 플랜이 준비되어 있어요</p>
-                        <a href="reservation.html" class="btn btn-lg">예약하러 가기 >></a>
+            </div>
+        </section>
+        <section id="price">
+            <div class="container fbx">
+                <div class="price__left fbx">
+                    <h1 class="title dark">방문 서비스를<br> 살펴보세요</h1>
+                    <p class="text-sm">산책, 돌봄에는 30분부터 2시간까지<br>
+                        시간별 맞춤 플랜이 준비되어 있어요</p>
+                    <a href="reservation.html" class="btn btn-lg">예약하러 가기 >></a>
+                </div>
+                <div class="price__right fbx">
+                    <div class="price__card one">
+                        <img src="../static/img/main_price1.png" alt="price image">
                     </div>
-                    <div class="price__right fbx">
-                        <div class="price__card one">
-                            <img src="../static/img/main_price1.png" alt="price image">
-                        </div>
-                        <div class="price__card two">
-                            <img src="../static/img/main_price2.png" alt="price image">
-                        </div>
+                    <div class="price__card two">
+                        <img src="../static/img/main_price2.png" alt="price image">
                     </div>
                 </div>
-            </section>
-            <section id="petsitter" class="fbx">
-                <div class="container fbx">
-                    <div class="petsitter__left fbx">
-                        <h1 class="title dark">PETLAND의 <br> 펫시터로 지원하면,</h1>
-                        <p class="text-sm">시간당 최대 2만원이 넘는 수익 창출과<br>
-                            원하는 날과 시간만 자유롭게 일할 수 있할 수 있어요.</p>
-                        <a href="apply.html" class="btn btn-lg">자세히 보기 >></a>
-                    </div>
-                    <div class="petsitter__right fbx">
-                        <div class="petsitter__card">
-                            <img src="../static/img/dogcat.png" alt="petsitter image">
-                        </div>
+            </div>
+        </section>
+        <section id="petsitter" class="fbx">
+            <div class="container fbx">
+                <div class="petsitter__left fbx">
+                    <h1 class="title dark">PETLAND의 <br> 펫시터로 지원하면,</h1>
+                    <p class="text-sm">시간당 최대 2만원이 넘는 수익 창출과<br>
+                        원하는 날과 시간만 자유롭게 일할 수 있할 수 있어요.</p>
+                    <a href="apply.html" class="btn btn-lg">자세히 보기 >></a>
+                </div>
+                <div class="petsitter__right fbx">
+                    <div class="petsitter__card">
+                        <img src="../static/img/dogcat.png" alt="petsitter image">
                     </div>
                 </div>
-            </section>
-            <footer id="footer">
-                <div class="fbx footer__inner">
-                    <div class="footer__left">
-                        <p class="text-sm">펫랜드</p>
-                        <p class="footer__info">
-                            "(펫)펫피플 주소 : 서울시 냥냥구 멍멍동 12-12 빌딩 3층 (주식회사 펫피플)"<br>
-                            "사업자 등록번호 : 123-00-12345&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;통신판매업 신고 번호 : 제
-                            2050-서울멍양-03319"<br>
-                            "고객센터 문의 : 070 1234 5678 / catdog@grrrr.com"
-                        </p>
-                    </div>
-                    <div class="footer__right">
-                        <nav class="footer__nav">
-                            <ul>
-                                <li><a href="/insurance">안전보상제도</a> </li>
-                                <li><a href="/qna">질문과 답변</a> </li>
-                                <li><a href="/terms">이용 약관</a></li>
-                            </ul>
-                        </nav>
-                        <div class="footer__sns">
-                            <ul class="fbx">
-                                <li>
-                                    <a href="" class="sns__face" target="_blank">
-                                        <i class="fab fa-facebook-square"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" class="sns__insta" target="_blank">
-                                        <i class="fab fa-instagram-square"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="fbx footer__inner">
+                <div class="footer__left">
+                    <p class="text-sm">펫랜드</p>
+                    <p class="footer__info">
+                        "(펫)펫피플 주소 : 서울시 냥냥구 멍멍동 12-12 빌딩 3층 (주식회사 펫피플)"<br>
+                        "사업자 등록번호 : 123-00-12345&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;통신판매업 신고 번호 : 제
+                        2050-서울멍양-03319"<br>
+                        "고객센터 문의 : 070 1234 5678 / catdog@grrrr.com"
+                    </p>
+                </div>
+                <div class="footer__right">
+                    <nav class="footer__nav">
+                        <ul>
+                            <li><a href="/insurance">안전보상제도</a> </li>
+                            <li><a href="/qna">질문과 답변</a> </li>
+                            <li><a href="/terms">이용 약관</a></li>
+                        </ul>
+                    </nav>
+                    <div class="footer__sns">
+                        <ul class="fbx">
+                            <li>
+                                <a href="" class="sns__face" target="_blank">
+                                    <i class="fab fa-facebook-square"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="sns__insta" target="_blank">
+                                    <i class="fab fa-instagram-square"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </footer>
-        </div>
+            </div>
+        </footer>
+    </div>
     </div>
 
     <button class="arrowUp" data-link="#main"><i class="fas fa-arrow-up"></i></button>
