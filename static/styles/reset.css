@@ -6,20 +6,21 @@ body{font-family: 'Noto Sans KR', sans-serif;
 a{text-decoration: none;color: var(--color-dadrk-gray);}ul{list-style: none;}img{width: 100%;max-width: 100%;}
 button{background: transparent; cursor: pointer; border: none; outline: none;}
 
-.container{width: 100%;max-width: 1100px;margin: auto;padding: 5rem 2rem;}
+.container{width: 100%;max-width: 1100px;margin: auto;padding: 7rem 3rem;}
 
 :root{
     /* color */
     --color-primary: #c5a47e;
     --color-white: #ffffff;
-    --color-dark-gray: #4d4d4d;
+    /* --color-dark-gray: #4d4d4d; */
+    --color-dark-gray: #333333;
     --color-gray: #616161;
     --color-black: #000000;
 }
 
 /* Font size */
 .logo{font-size: 3.5rem;font-weight: 100;color:var(--color-primary);}
-.headline {font-size: 3rem;font-weight: 700;color: #333333;}
+.headline {font-size: 3rem;font-weight: 700;color: var(--color-dark-gray);}
 .text-extra-lg {font-size: 1.8rem;font-weight: 700;}
 .text-lg {font-size: 1.2rem;font-weight: 500;color: var(--color-gray);}
 .text-md {font-weight: 400;font-size: 1rem;color: var(--color-gray);}
