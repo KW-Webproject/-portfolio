@@ -41,13 +41,21 @@ button{background: transparent; cursor: pointer; border: none; outline: none;}
 }
 
 .header__inner{
-    height: 90px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 3rem;
 }
 
+.header__logo{
+    flex: 0.4;
+}
+
+.header__nav{
+    flex: 0.6;
+    display: flex;
+}
 .nav__menu{
     display: flex;
     position: relative;
@@ -82,6 +90,14 @@ button{background: transparent; cursor: pointer; border: none; outline: none;}
     font-size: 1.5rem;
     z-index: 1500;
     cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+
+.nav_toggle .fas{
+    cursor: pointer;
 }
 
 .fa-times{
@@ -89,15 +105,15 @@ button{background: transparent; cursor: pointer; border: none; outline: none;}
 }
 
 /* Toggle open */
-.nav__menu.open .nav_toggle .fa-times{
+.open .fa-times{
     display: block;
 }
 
-.nav__menu.open .nav_toggle .fa-bars{
+.open .fa-bars{
     display: none;
 }
 
-.nav__menu.open{
+.open .nav__menu{
     position: absolute;
     color: var(--color-white);
     background: var(--color-gray);
@@ -114,24 +130,32 @@ button{background: transparent; cursor: pointer; border: none; outline: none;}
     z-index: 3;
 }
 
-.nav__menu.open:before{
+.header__inner .open:before{
     content: "";
     position: fixed;
     top: 0;
-    right: 0;
-    width: 20vw;
+    left: 0;
+    width: 100vw;
     height: 100vh;
     z-index: 2;
     background: var(--color-dark-gray);
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.5s;
 }
 
-.nav__menu.open .nav__item{   
+.header__inner .open:before{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.open .nav__item{   
     transition: all 300ms ease-in;
     z-index: 4;
 }
 
-.nav__menu.open .nav__item:hover,
-.nav__menu.open .nav__item:focus{
+.open .nav__item:hover,
+.open .nav__item:focus{
     color: var(--color-primary);
     transform: translateX(10px);
     font-weight: 700;
