@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #map {
+            height: 300px;  
+            width: 400px;  
+        }
+    </style>
+</head>
+<body>
+<!--The div element for the map -->
+<div id="map"></div>
+<script>
+    function initMap() {
+        var Pet = {lat: 37.490049, lng: 126.927070};
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 15, center: Pet});
+
+        var marker = new google.maps.Marker({position: Pet, map: map,label: "Petland"});
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY1HHWoGR4FY1pQQirukx7kn9l9dUQrds&callback&callback&callback=initMap">
+</script>
+</body>
+</html>
