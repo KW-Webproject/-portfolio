@@ -20,7 +20,8 @@ button{background: transparent; cursor: pointer; border: none; outline: none;}
 
 /* Font size */
 .logo{font-size: 3.5rem;font-weight: 100;color:var(--color-primary);}
-.headline {font-size: 3rem;font-weight: 700;color: var(--color-dark-gray);}
+.headline {font-size: 3rem;font-weight: 700;color: var(--color-dark-gray);
+    letter-spacing: 3px;}
 .text-extra-lg {font-size: 1.8rem;font-weight: 700;}
 .text-lg {font-size: 1.2rem;font-weight: 500;color: var(--color-gray);}
 .text-md {font-weight: 400;font-size: 1rem;color: var(--color-gray);}

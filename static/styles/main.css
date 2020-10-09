@@ -106,8 +106,8 @@
 .about__left .headline{
     text-align: center;
     margin-bottom: 20px;
-    letter-spacing: 3px;
 }
+
 .about__right{
     flex: 0.7;
     margin-left: 150px;
@@ -158,7 +158,6 @@
 
 .petsitter__top .headline{
     margin-bottom: 20px;
-    letter-spacing: 3px;
 }
 
 .petsitter__cards{
@@ -180,4 +179,138 @@
 
 .card .text-md{
     line-height: 1.6;
+}
+
+/* Colors */
+
+.colors__top{
+    text-align: center;
+}
+
+.colors__top .text-lg{
+    margin-bottom: 10px;
+}
+
+.colors__top .headline{
+    margin-bottom: 20px;
+}
+
+.colors__bottom{
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+}
+
+.colors{
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+.colors > img{
+    height: 670px;
+    cursor: pointer;
+}
+
+.colors__description{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 2rem;
+    padding-left: 1.5rem;
+    background: var(--color-dark-gray);
+    opacity: 0;
+    /* transform: translateX(-20%); */
+    transition: all 300ms ease-in-out;
+}
+
+.colors:hover .colors__description{
+    opacity: 0.7;
+    /* transform: translateX(0); */
+}
+
+.colors__description > p{
+    font-weight: 700;
+} 
+
+.color-left,
+.color-right{
+    font-size: 0;
+}
+
+/* colors__full */
+
+.colors__full{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--color-dark-gray);
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    padding: 7rem 3rem;
+    z-index: 10000;
+    cursor: default;
+}
+.full__top{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.full__top .headline{
+    margin: 1.5rem;
+}
+
+.full__top {
+    margin-bottom: 5rem;
+}
+.full__bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full__bottom .full__img{
+    width: 700px;
+    margin-right: 3.5rem;
+}
+
+.full__bottom .text-lg{
+    text-align: left;
+    line-height: 2;
+}
+
+.full__top .fa-times{
+    color: var(--color-white);
+    font-size: 1.5rem;
+    border: 1px solid var(--color-white);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    right: 10%;
+    cursor: pointer;
+}
+
+.colors__full.hide{
+    /* display: none; */
+    position: absolute;
+    width: 100%;
+    height: 670px;
+    background: transparent;
+}
+
+.colors__full.hide * {
+    display: none;
+}
+
+.colors__bottom.dontclick{
+    pointer-events: none;
+} 
+
+.colors__bottom.dontclick i{
+    pointer-events: auto;
 }
