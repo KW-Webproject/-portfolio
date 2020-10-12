@@ -167,7 +167,6 @@ button{background: transparent; cursor: pointer; border: none; outline: none;}
 /* Footer -temporary margin*/
 
 #footer{
-    margin-top: 90px;
     width: 100%;
     background: var(--color-white);
 }
