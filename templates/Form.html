@@ -4,59 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../static/styles/reservation.css">
 </head>
 <body>
-    <form>
-        <label>이름 : <input type="text" name="name"><br></label>
-        <label>전화번호 : <input type="tel" name="phone1"/> -
-        <input type='tel' name=phone2/> -
-        <input type='tel' name=phone2/>
-        <br></label>
-        <d1>애완동물</d1><br>
-        <input type="radio" name="pet" value="dog"/>
-        <label for="dog">강아지</label>
-        <input type="radio" name="pet" value="cat"/>
-        <label for="cat">고양이</label><br>
-        <input type="checkbox" name="service" value="service1"/>
-        <label for="service1">도그워킹</label>
-        <input type="checkbox" name="service" value="service2"/>
-        <label for="service2">가정돌봄</label><br>
-        <lavel>날짜 : <input type='date'
-        value='2020-10-01' /></lavel>
-        </label><br>
-        <d1>Pet land open 09:00 ~ close 19:00</d1><br>
-        <input type="checkbox" name="time" value="time1"/>
-        <label for="time1">09:00~10:00</label>
-        <input type="checkbox" name="time" value="time2"/>
-        <label for="time2">10:00~11:00</label>    
-        <input type="checkbox" name="time" value="time3"/>
-        <label for="time3">11:00~12:00</label><br>
-        <input type="checkbox" name="time" value="time4"/>
-        <label for="time4">13:00~14:00</label>
-        <input type="checkbox" name="time" value="time5"/>
-        <label for="time5">14:00~15:00</label>    
-        <input type="checkbox" name="time" value="time6"/>
-        <label for="time6">15:00~16:00</label><br>
-        <input type="checkbox" name="time" value="time7"/>
-        <label for="time7">16:00~17:00</label>
-        <input type="checkbox" name="time" value="time8"/>
-        <label for="time8">17:00~18:00</label>    
-        <input type="checkbox" name="time" value="time9"/>
-        <label for="time9">18:00~19:00</label><br>
+    <section id="form">
+        <div class="sistemap">
+            <p class="text-md">PETLAND > 예약하기</p>
+        </div>
+        <div class="container">
+            <div class="title">
+                <h1 class="text-extra-lg">예약하기</h1>
+                <div class="line"></div>
+            </div>
+        </div>
+        <form action="" method="POST" class="text-md"></form>
+    </section>
+    <section id="login">
+        <form action="" method="POST" class="text-md">
 
+        <!-- name -->
+        <label for="name">이&emsp;&ensp;&ensp;름&emsp;
+            <input class="name" type="text" name="name"  required>
+        </label>
+        <br><div class="subline"></div>  
 
-        <!-- 우편번호 찾기 -->
-        <input type="text" id="sample6_postcode" placeholder="우편번호">
-        <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
-        <input type="text" id="sample6_address" placeholder="주소"><br>
-        <input type="text" id="sample6_detailAddress" placeholder="상세주소">
-        <input type="text" id="sample6_extraAddress" placeholder="참고항목">
+        <!-- tel  -->
+        <div class="tel">    
+            <label for="tel">전화&emsp;번호&ensp; <input class="tel" type="tel" name="usertel" pattern="(010)"></label>
+            <label><input class="tel" type="tel" name="usertel" pattern="\d{3,4}"></label>
+            <label><input class="tel" type="tel" name="usertel" pattern="\d{4}"></label>
+        </div>
+        <div class="subline"></div><br>
         
-        <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-        <script>
-            function sample6_execDaumPostcode() {
-                new daum.Postcode({
-                    oncomplete: function(data) {
+
+        <!-- Pet -->
+        <div class="pet">
+            <label class="main-text">애완&emsp;동물&ensp;&emsp;&emsp;&emsp;</label>
+            <input type="radio" name="pet" value="dog"/>
+            <label for="dog">&ensp;강아지&emsp;&emsp;</label>
+            <input type="radio" name="pet" value="cat"/>
+            <label class="cat" for="cat">&ensp;고양이&emsp;&emsp;&emsp;</label>
+        </div>
+        <br><div class="subline"></div>
+     
+        <!-- service -->
+
+        <div class="service"> &ensp;서&ensp;비&ensp;스&ensp;&emsp;
+            
+            <input type="checkbox" name="service" value="service1"/>
+            <label for="service1">산책&emsp;</label>
+            <input type="checkbox" name="service" value="service2"/>
+            <label for="service2">가정돌봄&ensp;</label>
+            <input type="checkbox" name="service" value="service2"/>
+            <label for="service2">훈&emsp;련</label><br>
+        </div>
+        <div class="subline"></div> 
+
+        <!-- date -->
+        <div class="date">
+            <lavel>&emsp;&emsp;&emsp;날&emsp;&emsp;짜&emsp;  <input class="date" type='date'
+            value='2020-10-01' />&emsp;&emsp;&emsp;&emsp;</lavel>
+            </label><br>
+            <div class="subline"></div>
+        </div>
+
+        <!-- time -->
+        <div class="open">
+            <d1 class="open">Petland&emsp;Time &emsp; 09:00 ~ 19:00</d1></label><br>
+        </div>
+        <div class="time">    
+            <input type="checkbox" name="time" value="time1"/>
+            <label for="time1">09:00~10:00&emsp;</label>
+            <input type="checkbox" name="time" value="time2"/>
+            <label for="time2">10:00~11:00&emsp;</label>    
+            <input type="checkbox" name="time" value="time3"/>
+            <label for="time3">11:00~12:00&emsp;</label><br>
+            <div class="subline"></div><br>
+            <input type="checkbox" name="time" value="time4"/>
+            <label for="time4">13:00~14:00&emsp;</label>
+            <input type="checkbox" name="time" value="time5"/>
+            <label for="time5">14:00~15:00&emsp;</label>    
+            <input type="checkbox" name="time" value="time6"/>
+            <label for="time6">15:00~16:00&emsp;</label><br>
+            <div class="subline"></div><br>
+            <input type="checkbox" name="time" value="time7"/>
+            <label for="time7">16:00~17:00&emsp;</label>
+            <input type="checkbox" name="time" value="time8"/>
+            <label for="time8">17:00~18:00&emsp;</label>    
+            <input type="checkbox" name="time" value="time9"/>
+            <label for="time9">18:00~19:00&emsp;</label><br>
+            <div class="subline"></div>
+        </div>
+          
+        <!-- 우편번호 찾기 -->
+        <div class="address">
+            <input class="address1" type="text" name="address" placeholder="우편번호">
+            <input class="address2"type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
+            <input class="address3"type="text" name="address" placeholder="주소"><br>
+            <input class="address3"type="text" name="address" placeholder="상세주소">
+        </div>
+            <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+            <script>
+                function sample6_execDaumPostcode() {
+                    new daum.Postcode({
+                        oncomplete: function(data) {
                         var addr = '';                            var extraAddr = ''; 
                         if (data.userSelectedType === 'R') { 
                             addr = data.roadAddress;
@@ -84,8 +135,14 @@
                     }
                 }).open();
             }
-        </script>
-    </form>
+            </script>
+                <div class="subline"></div>
+        <div>
+        <input class="Enter" type="submit" value="Petsitter 예약하기">
+        </div>
+    
+        </form>
+    </section>
 
     
 </body>
