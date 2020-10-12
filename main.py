@@ -15,6 +15,33 @@ def get_conn():
             )
     return conn
 
+@app.route("/test")
+def test():
+    sql = "SELECT p_name, p_date FROM pet_sitter"
+    result = ""
+
+    try:
+        conn = get_conn()
+        cur = conn.cursor()
+        cur.execute(
+                sql
+                )
+        result += '<ul>'
+        for(p_name, p_date) in cur:
+                result += """
+                    <li>이름 = {}</li>
+                    <li>날짜 = {}</li>
+                    """.format(p_name, p_date)
+        result += '</ul>'
+
+    except mariadb.Error:
+        result = "펫시터 없음"
+        sys.exit(1)
+    finally:
+        if conn:
+            conn.close()
+    return result
+    
 @app.route("/")
 def main():
     return render_template('main.html')
