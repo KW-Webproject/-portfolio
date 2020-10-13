@@ -61,7 +61,10 @@ def reservation():
 def search():
     return
 
+@app.route("/form")
+def form():
+    return render_template('Form.html')
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', debug=True)
 
