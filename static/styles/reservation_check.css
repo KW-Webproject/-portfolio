@@ -73,6 +73,7 @@ form input{
     outline: none;
     border-radius: 8px;
     color: var(--color-gray);
+    background-color: rgba(197, 164, 126, .4);
 }
 
 .reservation_check__btn span{

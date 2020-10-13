@@ -1,15 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    {% load static %}
+    {% block extrahead %}
+    <title>Petland</title>
     <link rel="stylesheet" href="../static/styles/main.css">
     <script src="https://kit.fontawesome.com/72c88d65e7.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    {% endblock %}
 </head>
 
 <body>
+    {% block section %}
     <section id="main">
         <div class="container white">
             <p class="text-lg white">by PETLAND</p>
@@ -19,14 +21,14 @@
                 <i class="fas fa-paw text-extra-lg white"></i>
                 <div class="line"></div>
             </div>
-            <p class="text-lg white">여행, 출장, 늦은 퇴근에도 걱정마세요! 가족같은 펫시터가 내 아이와 함께합니다</p>
-            <div class="down_button"><i class="fas fa-check"></i></div>
+            <p class="text-lg white single-animation">여행, 출장, 늦은 퇴근에도 걱정마세요! 가족같은 펫시터가 내 아이와 함께합니다</p>
+            <div class="down_button"><i class="fas fa-angle-down"></i></div>
         </div>
     </section>
     <section id="about">
         <div class="about__inner">
             <div class="container about__top">
-                <div class="about__left">
+                <div class="about__left animate-left">
                     <p class="text-lg gray">반려견과 당신을 위한</p>
                     <h1 class="headline">Petland</h1>
                     <div class="separator">
@@ -35,7 +37,7 @@
                         <div class="line color"></div>
                     </div>
                 </div>
-                <div class="about__right">
+                <div class="about__right animate-right">
                     <p class="about__description text-lg">
                         <span>
                             혼자 남겨진 반려동물을 생각하며, 외출을 망설인 적이 있으신가요?<br>
@@ -57,13 +59,13 @@
                 </div>
             </div>
             <!-- 이미지 가로 슬라이드 추가할 것 -->
-            <div class="about__bottom">
+            <div class="about__bottom animate-bottom-1">
             </div>
         </div>
     </section>
     <section id="petsitter">
         <div class="container">
-            <div class="petsitter__top">
+            <div class="petsitter__top animate-top">
                 <p class="text-lg gray">믿을 수 있고, 안심할 수 있는</p>
                 <h1 class="headline">Pesitter</h1>
                 <div class="separator">
@@ -74,22 +76,22 @@
             </div>
             <div class="petsitter__bottom">
                 <div class="petsitter__cards">
-                    <div class="card">
+                    <div class="card animate-bottom-card-1">
                         <p class="text-sm">01</p>
                         <h2 class="text-lg">4단계 신원 검증</h2>
                         <p class="text-md gray">신분증 사본 제출, 등초본 인증, 신원 보증부대 및 펫시터 계약서로 신원을 4단계 검증합니다</p>
                     </div>
-                    <div class="card">
+                    <div class="card animate-bottom-card-2">
                         <p class="text-sm">02</p>
                         <h2 class="text-lg">모든 돌봄 과정 촬영</h2>
                         <p class="text-md gray">펫시터의 카메라 촬영을 의무화하고 있으며 모든 과정이 촬영되어 실시간으로 중계됩니다</p>
                     </div>
-                    <div class="card">
+                    <div class="card animate-bottom-card-3">
                         <p class="text-sm">03</p>
                         <h2 class="text-lg">최고 전문진과 교육 협업</h2>
                         <p class="text-md gray">TV 동물장농 출연중이신 송종찬 대표님과 펫시터 이론 및 실습 교육을 협업하고 있습니다</p>
                     </div>
-                    <div class="card">
+                    <div class="card animate-bottom-card-4">
                         <p class="text-sm">04</p>
                         <h2 class="text-lg">안전 보상 프로그램</h2>
                         <p class="text-md gray">서비스 이용중 예상치 못한 문제 발생시 체계적인 안전 보상 프로그램이 적용됩니다</p>
@@ -99,7 +101,7 @@
         </div>
     </section>
     <section id="colors">
-        <div class="colors__top container">
+        <div class="colors__top container animate-top-3">
             <p class="text-lg gray">최고의 펫시터만 선정하여 매칭해 드립니다.</p>
             <h1 class="headline">Petland</h1>
             <div class="separator">
@@ -108,7 +110,7 @@
                 <div class="line color"></div>
             </div>
         </div>
-        <div class="colors__bottom">
+        <div class="colors__bottom animate-bottom">
             <div class="color-left">
                 <a class="colors cherry">
                     <img src="../static/img/cherry.jpg" alt="">
@@ -116,13 +118,13 @@
                         <p class="logo white">모든 산책 과정을<br> 실시간 Live로 보세요</p>
                     </div>
                     <div class="colors__full hide full_cherry">
-                        <div class="full__top">  
+                        <div class="full__top">
                             <i class="fas fa-times"></i>
                             <h1 class="headline white">실시간 Live 서비스</h1>
                             <div class="separator">
                                 <div class="line color"></div>
                                 <i class="fas fa-paw text-md icolor"></i>
-                            <div class="line color"></div>
+                                <div class="line color"></div>
                             </div>
                         </div>
                         <div class="full__bottom">
@@ -145,13 +147,13 @@
                         <p class="logo white">언제 어디서든<br> 펫시터를 부르세요</p>
                     </div>
                     <div class="colors__full hide full_orange">
-                        <div class="full__top">  
+                        <div class="full__top">
                             <i class="fas fa-times"></i>
                             <h1 class="headline white">언제 어디서든<br> 펫시터를 부르세요</h1>
                             <div class="separator">
                                 <div class="line color"></div>
                                 <i class="fas fa-paw text-md icolor"></i>
-                            <div class="line color"></div>
+                                <div class="line color"></div>
                             </div>
                         </div>
                         <div class="full__bottom">
@@ -174,13 +176,13 @@
                         <p class="logo white">안전한 산책과 함께<br> 깔끔한 마무리</p>
                     </div>
                     <div class="colors__full hide full_gray">
-                        <div class="full__top">  
+                        <div class="full__top">
                             <i class="fas fa-times"></i>
                             <h1 class="headline white">안전한 산책과 함께<br> 깔끔한 마무리</h1>
                             <div class="separator">
                                 <div class="line color"></div>
                                 <i class="fas fa-paw text-md icolor"></i>
-                            <div class="line color"></div>
+                                <div class="line color"></div>
                             </div>
                         </div>
                         <div class="full__bottom">
@@ -201,13 +203,13 @@
                         <p class="logo white">반려동물 성향에 맞춰<br> 섬세하게 돌봐드려요</p>
                     </div>
                     <div class="colors__full hide full_yellow">
-                        <div class="full__top">  
+                        <div class="full__top">
                             <i class="fas fa-times"></i>
                             <h1 class="headline white">반려동물 성향에 맞춰<br> 섬세하게 돌봐드려요</h1>
                             <div class="separator">
                                 <div class="line color"></div>
                                 <i class="fas fa-paw text-md icolor"></i>
-                            <div class="line color"></div>
+                                <div class="line color"></div>
                             </div>
                         </div>
                         <div class="full__bottom">
@@ -229,20 +231,20 @@
     <section id="reservation">
         <div class="container">
             <div class="reservation__content">
-                <p class="text-extra-lg white">
+                <p class="text-extra-lg white animate-top-button">
                     " 혼자 남겨진 반려동물을 생각하며, 외출을 망설인 적이 있으신가요?<br>이제는 와요에게 맡기고, 여러분의 소중한 일상을 마음 편히 보내세요 "
                 </p>
-                <a href="reservation.html" class="reservation__btn">
+                <a href="reservation.html" class="reservation__btn animate-bottom-button">
                     <span class="text-md white">예약하러 가기</span>
-                </a>   
+                </a>
             </div>
         </div>
     </section>
     <!-- google map -->
     <div id="map">
-        <p class="hi">hi</p>
-    </div>  
-    <button class="arrowUp" data-link="#main"><i class="fas fa-arrow-up"></i></button>
+    </div>
+    {% endblock %}
+    {% block script %}
     <script>
         function initMap() {
             var Pet = { lat: 37.490049, lng: 126.927070 };
@@ -254,8 +256,8 @@
     </script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY1HHWoGR4FY1pQQirukx7kn9l9dUQrds&callback&callback&callback=initMap">
-    </script>
+        </script>
     <script src="../static/js/colors.js"></script>
+    <script src="../static/js/scroll.js"></script>
+    {% endblock %}
 </body>
-
-</html>
