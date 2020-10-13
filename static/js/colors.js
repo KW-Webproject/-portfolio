@@ -2,6 +2,7 @@ const color = document.querySelector(".colors__bottom");
 const button = document.querySelectorAll(".full__top i");
 const fullpages = document.querySelectorAll(".colors__full");
 let flag = false; // 4컷 false!
+
 color.addEventListener("click", (e) => {
     const target = e.target;
     if (target.classList.contains("fas")) {

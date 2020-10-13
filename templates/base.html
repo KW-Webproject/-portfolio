@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% load head %}
     <title>Document</title>
     <script src="https://kit.fontawesome.com/72c88d65e7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../static/styles/reset.css">
@@ -86,6 +85,25 @@
         </div>
     </footer>
     <script src="../static/js/nav_toggle.js" def></script>
+    <script>
+        const header = document.querySelector("#header");
+        const headerHeight = header.getBoundingClientRect().height;
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > headerHeight) {
+                header.setAttribute("style", "background: white;")
+                console.log("big");
+            } else {
+
+                header.setAttribute("style", "background: transparent;")
+            }
+        });
+        console.log(header);
+        console.log(headerHeight);
+        console.log(window.scrollY);
+    </script>
+    {% block script %}
+    {% endblock %}
 </body>
 
 </html>
