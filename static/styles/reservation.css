@@ -79,7 +79,7 @@ input{
          
 }
 
-.tel_main{
+.phone_main{
     padding-right: 48%;
     font-size: 1rem;
     text-align: center;
@@ -90,14 +90,17 @@ input{
 }
 
 
-#tel{
-    padding: 0.5rem ;
+#phone{
+    border-style:solid;
     border: 1px solid var(--color-primary);
-    border-color: rgba(197, 164, 126, .4);
-    border-radius: 4px;
-    width: 10rem;
+    border-color: rgba(197, 164, 126, .4);;
+    padding: 0.5rem;
+    width: 30.5rem;
+    font-size: 1rem;
     text-align: center;
+    display: inline-block;
     margin-bottom: 10px;
+
 }
 
 .pet_main{
