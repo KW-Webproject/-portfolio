@@ -20,130 +20,116 @@
         <form action="" method="POST" class="text-md"></form>
     </section>
     <section id="login">
-        <form action="" method="POST" class="text-md">
+        <div class="container">
+            <form action="" method="POST" class="text-md">
 
-        <!-- name -->
-        <label for="name">이&emsp;&ensp;&ensp;름&emsp;
-            <input class="name" type="text" name="name"  required>
-        </label>
-        <br><div class="subline"></div>  
+            <!-- name -->
+            <label for="name"></label>
+            <span class="name_main">이름</span><br>
+            <input type="text" id="name"  required><br>
 
-        <!-- tel  -->
-        <div class="tel">    
-            <label for="tel">전화&emsp;번호&ensp; <input class="tel" type="tel" name="usertel" pattern="(010)"></label>
-            <label><input class="tel" type="tel" name="usertel" pattern="\d{3,4}"></label>
-            <label><input class="tel" type="tel" name="usertel" pattern="\d{4}"></label>
-        </div>
-        <div class="subline"></div><br>
+            <!-- tel  -->
+            <label for="tel"></label>
+                <span class="tel_main">전화번호</span><br>
+                <input type="tel" id="tel" pattern="(010)">
+                <input type="tel" id="tel" pattern="\d{3,4}">
+                <input type="tel" id="tel" pattern="\d{4}"><br>
         
-
-        <!-- Pet -->
-        <div class="pet">
-            <label class="main-text">애완&emsp;동물&ensp;&emsp;&emsp;&emsp;</label>
-            <input type="radio" name="pet" value="dog"/>
-            <label for="dog">&ensp;강아지&emsp;&emsp;</label>
-            <input type="radio" name="pet" value="cat"/>
-            <label class="cat" for="cat">&ensp;고양이&emsp;&emsp;&emsp;</label>
-        </div>
-        <br><div class="subline"></div>
+            <!-- Pet -->
+            <span class="pet_main">애완동물</span><br>
+            <label class="pet_sub"> 
+                <input type="radio" id="pet"/>강아지&nbsp;&nbsp;
+                <input type="radio" id="pet"/>고양이
+            </label>    
+            <br><div class="subline"></div>
      
-        <!-- service -->
+            <!-- service -->
+            <span class="service_main">서비스</span><br>
+            <div class="service">
+                <input type="checkbox"/>
+                <span class="service_sub">산책&nbsp;</span>
+                <input type="checkbox"/>
+                <span class="service_sub">가정돌봄&nbsp;</span>
+                <input type="checkbox"/>
+                <span class="service_sub">훈련</span>
+            </div><br>
 
-        <div class="service"> &ensp;서&ensp;비&ensp;스&ensp;&emsp;
+            <!-- date -->
+            <label for="date"></label>
+                <span class="date_main">날짜</span><br>
+                <input type='date' id="date" value='2020-10-01' /><br>
+
+            <!-- time -->
+                <d1 class="open">PetlandTime  09:00 ~ 19:00</d1><br>
+            <div class="time_main">
+                <label for="time"></label>   
+                    <input type="checkbox" id="time"/>
+                        <span>09:00~10:00</span>
+                    <input type="checkbox" id="time"/>
+                        <span>10:00~11:00</span>    
+                    <input type="checkbox" id="time"/>
+                        <span>11:00~12:00</span><br>
+                    <div class="subline"></div><br>
+                    <input type="checkbox" id="time"/>
+                        <span>13:00~14:00</span>
+                    <input type="checkbox" id="time"/>
+                        <span>14:00~15:00</span>   
+                    <input type="checkbox" id="time"/>
+                        <span>15:00~16:00</span>
+                    <div class="subline"></div><br>
+                    <input type="checkbox" id="time"/>
+                        <span>16:00~17:00</span>
+                    <input type="checkbox" id="time"/>
+                        <span>17:00~18:00</span>    
+                    <input type="checkbox" id="time"/>
+                    <span>18:00~19:00</span>
+            </div>
             
-            <input type="checkbox" name="service" value="service1"/>
-            <label for="service1">산책&emsp;</label>
-            <input type="checkbox" name="service" value="service2"/>
-            <label for="service2">가정돌봄&ensp;</label>
-            <input type="checkbox" name="service" value="service2"/>
-            <label for="service2">훈&emsp;련</label><br>
-        </div>
-        <div class="subline"></div> 
-
-        <!-- date -->
-        <div class="date">
-            <lavel>&emsp;&emsp;&emsp;날&emsp;&emsp;짜&emsp;  <input class="date" type='date'
-            value='2020-10-01' />&emsp;&emsp;&emsp;&emsp;</lavel>
-            </label><br>
-            <div class="subline"></div>
-        </div>
-
-        <!-- time -->
-        <div class="open">
-            <d1 class="open">Petland&emsp;Time &emsp; 09:00 ~ 19:00</d1></label><br>
-        </div>
-        <div class="time">    
-            <input type="checkbox" name="time" value="time1"/>
-            <label for="time1">09:00~10:00&emsp;</label>
-            <input type="checkbox" name="time" value="time2"/>
-            <label for="time2">10:00~11:00&emsp;</label>    
-            <input type="checkbox" name="time" value="time3"/>
-            <label for="time3">11:00~12:00&emsp;</label><br>
-            <div class="subline"></div><br>
-            <input type="checkbox" name="time" value="time4"/>
-            <label for="time4">13:00~14:00&emsp;</label>
-            <input type="checkbox" name="time" value="time5"/>
-            <label for="time5">14:00~15:00&emsp;</label>    
-            <input type="checkbox" name="time" value="time6"/>
-            <label for="time6">15:00~16:00&emsp;</label><br>
-            <div class="subline"></div><br>
-            <input type="checkbox" name="time" value="time7"/>
-            <label for="time7">16:00~17:00&emsp;</label>
-            <input type="checkbox" name="time" value="time8"/>
-            <label for="time8">17:00~18:00&emsp;</label>    
-            <input type="checkbox" name="time" value="time9"/>
-            <label for="time9">18:00~19:00&emsp;</label><br>
-            <div class="subline"></div>
-        </div>
-          
-        <!-- 우편번호 찾기 -->
-        <div class="address">
-            <input class="address1" type="text" name="address" placeholder="우편번호">
-            <input class="address2"type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
-            <input class="address3"type="text" name="address" placeholder="주소"><br>
-            <input class="address3"type="text" name="address" placeholder="상세주소">
-        </div>
-            <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-            <script>
-                function sample6_execDaumPostcode() {
-                    new daum.Postcode({
-                        oncomplete: function(data) {
-                        var addr = '';                            var extraAddr = ''; 
-                        if (data.userSelectedType === 'R') { 
-                            addr = data.roadAddress;
-                        } else { 
-                            addr = data.jibunAddress;
+            <!-- 우편번호 찾기 -->
+            <span class="address_main">우편</span><br>
+            <div class="address_main">
+                <input class="address_sub"type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
+                <input class="address_sub_add" type="text" placeholder="우편번호">
+                <label for="address"></label>
+                    <input type="text" id="address" placeholder="주소">
+                    <input type="text" id="address" placeholder="상세주소">
+            
+                    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+                    <script>
+                        function sample6_execDaumPostcode() {
+                            new daum.Postcode({
+                                oncomplete: function(data) {
+                                var addr = '';                            var extraAddr = ''; 
+                                if (data.userSelectedType === 'R') { 
+                                    addr = data.roadAddress;
+                                } else { 
+                                    addr = data.jibunAddress;
+                                }
+                                if(data.userSelectedType === 'R'){
+                                    if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                                        extraAddr += data.bname;
+                                    }
+                                    if(data.buildingName !== '' && data.apartment === 'Y'){
+                                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                                    }
+                                    if(extraAddr !== ''){
+                                        extraAddr = ' (' + extraAddr + ')';
+                                    }
+                                    document.getElementById("sample6_extraAddress").value = extraAddr;
+                                
+                                } else {
+                                    document.getElementById("sample6_extraAddress").value = '';
+                                }
+                                document.getElementById('sample6_postcode').value = data.zonecode;
+                                document.getElementById("sample6_address").value = addr;
+                                document.getElementById("sample6_detailAddress").focus();
+                                }
+                            }).open();
                         }
-                        if(data.userSelectedType === 'R'){
-                            if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
-                                extraAddr += data.bname;
-                            }
-                            if(data.buildingName !== '' && data.apartment === 'Y'){
-                                extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
-                            }
-                            if(extraAddr !== ''){
-                                extraAddr = ' (' + extraAddr + ')';
-                            }
-                            document.getElementById("sample6_extraAddress").value = extraAddr;
-                        
-                        } else {
-                            document.getElementById("sample6_extraAddress").value = '';
-                        }
-                        document.getElementById('sample6_postcode').value = data.zonecode;
-                        document.getElementById("sample6_address").value = addr;
-                        document.getElementById("sample6_detailAddress").focus();
-                    }
-                }).open();
-            }
-            </script>
-                <div class="subline"></div>
-        <div>
-        <input class="Enter" type="submit" value="Petsitter 예약하기">
-        </div>
-    
-        </form>
+                    </script>
+            </div><br>
+                <input class="Enter" type="submit" value="Petsitter 예약하기">
+        </div> 
     </section>
-
-    
 </body>
 </html>
