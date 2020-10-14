@@ -169,17 +169,20 @@ input{
 .open{
     font-size: 25px;
     text-align: center;
-    padding: 100px;
+    padding: 50px;
     margin: auto;
 }
 
 .time_main{
     font-size: 1.2rem;
     padding: 60px;
-    padding-top: 3rem;
+    padding-top: 5rem;
     margin: auto;
 }
 
+.time{
+    padding-bottom: 5rem;
+}
 .address_main{
     padding-right: 48%;
     width: 6rem;

@@ -26,73 +26,71 @@
             <!-- name -->
             <label for="name"></label>
             <span class="name_main">이름</span><br>
-            <input type="text" id="name"  required><br>
+            <input type="text" id="name" name="name"  required><br>
 
             <!-- tel  -->
             <label for="tel"></label>
                 <span class="tel_main">전화번호</span><br>
-                <input type="tel" id="tel" pattern="(010)">
-                <input type="tel" id="tel" pattern="\d{3,4}">
-                <input type="tel" id="tel" pattern="\d{4}"><br>
+                <input type="tel" id="tel" pattern="(010)" name="tel">
+                <input type="tel" id="tel" pattern="\d{3,4}" name="tel">
+                <input type="tel" id="tel" pattern="\d{4}" name="tel"><br>
         
             <!-- Pet -->
             <span class="pet_main">애완동물</span><br>
             <label class="pet_sub"> 
-                <input type="radio" id="pet"/>강아지&nbsp;&nbsp;
-                <input type="radio" id="pet"/>고양이
+                <input type="radio" id="pet" name="pet"/>강아지&nbsp;&nbsp;
+                <input type="radio" id="pet" name="pet"/>고양이
             </label>    
             <br><div class="subline"></div>
      
             <!-- service -->
             <span class="service_main">서비스</span><br>
             <div class="service">
-                <input type="checkbox"/>
+                <input type="checkbox" name="service"/>
                 <span class="service_sub">산책&nbsp;</span>
-                <input type="checkbox"/>
+                <input type="checkbox" name="service"/>
                 <span class="service_sub">가정돌봄&nbsp;</span>
                 <input type="checkbox"/>
-                <span class="service_sub">훈련</span>
+                <span class="service_sub" name="servcie">훈련</span>
             </div><br>
 
             <!-- date -->
             <label for="date"></label>
                 <span class="date_main">날짜</span><br>
-                <input type='date' id="date" value='2020-10-01' /><br>
+                <input type='date' id="date" value='2020-10-01' name="date" /><br>
 
             <!-- time -->
                 <d1 class="open">PetlandTime  09:00 ~ 19:00</d1><br>
             <div class="time_main">
                 <label for="time"></label>   
-                    <input type="checkbox" id="time"/>
-                        <span>09:00~10:00</span>
-                    <input type="checkbox" id="time"/>
-                        <span>10:00~11:00</span>    
-                    <input type="checkbox" id="time"/>
-                        <span>11:00~12:00</span><br>
-                    <div class="subline"></div><br>
-                    <input type="checkbox" id="time"/>
-                        <span>13:00~14:00</span>
-                    <input type="checkbox" id="time"/>
-                        <span>14:00~15:00</span>   
-                    <input type="checkbox" id="time"/>
-                        <span>15:00~16:00</span>
-                    <div class="subline"></div><br>
-                    <input type="checkbox" id="time"/>
-                        <span>16:00~17:00</span>
-                    <input type="checkbox" id="time"/>
-                        <span>17:00~18:00</span>    
-                    <input type="checkbox" id="time"/>
+                    <input type="checkbox" id="time" name="time"/>
+                        <span>09:00~10:00&nbsp;</span>
+                    <input type="checkbox" id="time" name="time"/>
+                        <span>10:00~11:00&nbsp;</span>    
+                    <input type="checkbox" id="time" name="time"/>
+                        <span>11:00~12:00</span><br><br>
+                    <input type="checkbox" id="time" name="time"/>
+                        <span>13:00~14:00&nbsp;</span>
+                    <input type="checkbox" id="time" name="time"/>
+                        <span>14:00~15:00&nbsp;</span>   
+                    <input type="checkbox" id="time" name="time"/>
+                        <span>15:00~16:00</span><br><br>
+                    <input type="checkbox" id="time" name="time"/>
+                        <span>16:00~17:00&nbsp;</span>
+                    <input type="checkbox" id="time" name="time"/>
+                        <span>17:00~18:00&nbsp;</span>    
+                    <input type="checkbox" id="time" name="time"/>
                     <span>18:00~19:00</span>
             </div>
             
             <!-- 우편번호 찾기 -->
             <span class="address_main">우편</span><br>
             <div class="address_main">
-                <input class="address_sub"type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
-                <input class="address_sub_add" type="text" placeholder="우편번호">
+                <input class="address_sub"type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" name="address">
+                <input class="address_sub_add" type="text" placeholder="우편번호" name="address">
                 <label for="address"></label>
-                    <input type="text" id="address" placeholder="주소">
-                    <input type="text" id="address" placeholder="상세주소">
+                    <input type="text" id="address" placeholder="주소" name="address">
+                    <input type="text" id="address" placeholder="상세주소" name="address">
             
                     <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
                     <script>
