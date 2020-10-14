@@ -17,23 +17,22 @@
                 <div class="line"></div>
             </div>
         </div>
-        <form action="" method="POST" class="text-md"></form>
     </section>
     <section id="login">
         <div class="container">
-            <form action="" method="POST" class="text-md">
+            <form action="/form" method="POST" class="text-md">
 
             <!-- name -->
             <label for="name"></label>
             <span class="name_main">이름</span><br>
             <input type="text" id="name" name="name"  required><br>
 
-            <!-- tel  -->
-            <label for="tel"></label>
-                <span class="tel_main">전화번호</span><br>
-                <input type="tel" id="tel" pattern="(010)" name="tel">
-                <input type="tel" id="tel" pattern="\d{3,4}" name="tel">
-                <input type="tel" id="tel" pattern="\d{4}" name="tel"><br>
+            <!-- phone  -->
+            <label for="phone"></label>
+                <span class="phone_main">전화번호</span><br>
+                <input type="phone" id="phone" pattern="(010)" name="phone">
+                <input type="phone" id="phone" pattern="\d{3,4}" name="phone">
+                <input type="phone" id="phone" pattern="\d{4}" name="phone"><br>
         
             <!-- Pet -->
             <span class="pet_main">애완동물</span><br>
@@ -126,7 +125,9 @@
                         }
                     </script>
             </div><br>
-                <input class="Enter" type="submit" value="Petsitter 예약하기">
+                <!-- <input class="Enter" type="submit" value="Petsitter 예약하기"> -->
+                <button class="Enter" type="submit">Petsitter 예약하기</button>
+            </form>
         </div> 
     </section>
 </body>
