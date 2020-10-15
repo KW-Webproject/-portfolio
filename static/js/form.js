@@ -130,22 +130,25 @@ function toJson() {
     toString(object);
     const json = JSON.stringify(object);
     console.log(json);
+    const test = "test";
 
-    //    alert(`입력한 정보가 ${json}이 맞습니까?`);
+    alert(`입력한 정보가 ${json}이 맞습니까?`);
 
 
-    // $.ajax({
-    //     type: 'post',
-    //     url: 'test.html',
-    //     data: json,
-    //     dataType: 'json',
-    //     error: function (xhr, status, error) {
-    //         alert(error);
-    //     },
-    //     success: function (json) {
-    //         console.log("성공!");
-    //     },
-    // });
+    $.ajax({
+        type: 'post',
+        url: 'localhost:5001/test',
+        contentType: 'application/plain',
+        data: test,
+        dataType: 'text',
+        error: function (error) {
+            console.log(error);
+        },
+        success: function () {
+            console.log("성공!");
+            // window.location = "localhost:5001/test"
+        }
+    });
 };
 
 function toString(object) {
