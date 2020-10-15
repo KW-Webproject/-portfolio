@@ -2,20 +2,22 @@
 /* --color-primary / white / dark-gray / gray / black */
 /* .logo >.headline >.text-extra-lg >.text-lg >.text-md > .text-sm
    .white{color: var(--color-white);} */
-#login{
-    margin-top: 3rem;
-    text-align: center;
-}
+
 input{
     display: inline-block;
+    outline: none;
 }
 #form{
     padding-top: 100px;
-}
-
-#login{
+    margin-top: 3rem;
+    text-align: center;
     padding-top: 0%;
 }
+.sistemap{
+    padding: 1rem;
+    padding-right: 80%;
+}
+
 
 #form .container{
     padding: 1rem 3rem;
@@ -58,35 +60,34 @@ input{
 }
 
 .name_main{
-    padding-right: 48%;
+    padding-right: 30%;
     font-size: 1rem; 
     text-align: center;
     width: 6rem;
     display: inline-block;
     color: black;
-    margin-bottom: 5px;
-    
+    margin: 0.2px;
+
 }
 
 #name {
-        padding: 0.8rem;
-        border: 1px solid var(--color-primary);
-        border-color: rgba(197, 164, 126, .4);
-        border-radius: 4px;
-        text-align: center;
-        width: 30.5rem;   
-        margin-bottom: 10px;
-         
+    padding: 1.1rem;
+    margin: 1rem;
+    border: 1px solid var(--color-primary);
+    border-color: rgba(197, 164, 126, .4);
+    border-radius: 4px;
+    text-align: center;
+    width: 30.5rem;   
 }
 
 .phone_main{
-    padding-right: 48%;
+    padding-right: 30%;
     font-size: 1rem;
     text-align: center;
     width: 6rem;
     display: inline-block;
     color: black;
-    margin-bottom: 5px;
+    margin: 0.2px;
 }
 
 
@@ -94,144 +95,163 @@ input{
     border-style:solid;
     border: 1px solid var(--color-primary);
     border-color: rgba(197, 164, 126, .4);;
-    padding: 0.5rem;
+    padding: 1.1rem;
+    margin: 1rem;
     width: 30.5rem;
     font-size: 1rem;
     text-align: center;
     display: inline-block;
-    margin-bottom: 10px;
-
 }
 
 .pet_main{
-    padding-right: 48%;
+    padding-right: 30%;
     width: 6rem;
     font-size: 1rem;
     text-align: center;
     display: inline-block;
     color: black;
-    margin-bottom: 5px;
+    margin: 0.2px;
 }
 
 .pet_sub{
     border-style:solid;
     border: 1px solid var(--color-primary);
     border-color: rgba(197, 164, 126, .4);;
-    padding: 0.5rem;
+    padding: 1.1rem;
+    margin: 1rem;
     width: 30.5rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
     display: inline-block;
-    margin-bottom: 10px;
 }
 
 .service_main{
-    padding-right: 48%;
+    padding-right: 30%;
     font-size: 1rem;
     text-align: center;
     width: 6rem;
     display: inline-block;
     color: black;
-    margin-bottom: 5px;
+    margin: 02px;
 }
 
 .service{
     border-style:solid;
     border: 1px solid var(--color-primary);
     border-color: rgba(197, 164, 126, .4);;
-    padding: 0.5rem;
+    padding: 1.1rem;
+    margin: 1rem;
     width: 30.5rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
     display: inline-block;
-    margin-bottom: 10px;
 }
 
 .date_main{
-    padding-right: 48%;
+    padding-right: 30%;
     width: 6rem;
     font-size: 1rem;
     text-align: center;
     display: inline-block;
     color: black;
-    margin-bottom: 5px;
+    margin: 0.2px;
 }
 
 #date{
     border-style:solid;
     border: 1px solid var(--color-primary);
     border-color: rgba(197, 164, 126, .4);;
-    padding: 0.5rem;
+    padding: 1.1rem;
+    margin: 1rem;
     width: 30.5rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-align: center;
     display: inline-block;
-    margin-bottom: 10px;
 }
 
 .open{
     font-size: 25px;
     text-align: center;
     padding: 50px;
-    margin: auto;
+    margin: 1rem;
 }
 
 .time_main{
     font-size: 1.2rem;
-    padding: 60px;
-    padding-top: 5rem;
-    margin: auto;
+    padding: 1.1rem;
+    margin: 1rem;
 }
 
 .time{
     padding-bottom: 5rem;
 }
 .address_main{
-    padding-right: 48%;
+    padding-right: 30%;
     width: 6rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     display: inline-block;
+    margin: 0.2px;
     color: black;
-    margin-bottom: 5px;
 
 }
-.address_sub_add{
+.address_im{
     border-style:solid;
     border: 1px solid var(--color-primary);
     border-color: rgba(197, 164, 126, .4);;
-    padding: 0.5rem;
+    padding: 1.1rem;
+    margin: 1rem;
     width: 30.5rem;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     text-align: center;
     display: inline-block;
-    margin-bottom: 5px;
 }
-.address_sub{
+.address_postcode {
     border-style:solid;
     border: 1px solid var(--color-primary);
     border-color: rgba(197, 164, 126, .4);;
-    padding: 0.5rem;
+    padding: 1.1rem;
+    margin: 1rem;
     width: 30.5rem;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     text-align: center;
     display: inline-block;
-    margin-bottom: 5px;
 }
-
-
-#address{
+.address_road {
     border-style:solid;
     border: 1px solid var(--color-primary);
     border-color: rgba(197, 164, 126, .4);;
-    padding: 0.5rem;
+    padding: 1.1rem;
+    margin: 1rem;
     width: 30.5rem;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     text-align: center;
     display: inline-block;
-    margin-bottom: 5px;
 }
 
+.address_jibun {
+    border-style:solid;
+    border: 1px solid var(--color-primary);
+    border-color: rgba(197, 164, 126, .4);;
+    padding: 1.1rem;
+    margin: 1rem;
+    width: 30.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+    display: inline-block;
+}
+
+.address_detail {
+    border-style:solid;
+    border: 1px solid var(--color-primary);
+    border-color: rgba(197, 164, 126, .4);;
+    padding: 1.1rem;
+    margin: 1rem;
+    width: 30.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+    display: inline-block;
+}
 
 .Enter{
     font-weight: 700;
