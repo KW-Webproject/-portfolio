@@ -7,6 +7,41 @@ downBtn.addEventListener("click", () => {
     const target = document.querySelector("#about");
     target.scrollIntoView({ behavior: 'smooth' });
 })
+
+// Navigation
+
+$(function () {
+
+    var link = $('#navbar a.dot');
+    link.on('click', function (e) {
+
+        var target = $($(this).attr('href'));
+
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 00);
+
+        $(this).addClass('active');
+
+        e.preventDefault();
+    });
+
+    $(window).on('scroll', function () {
+        findPosition();
+    });
+
+    function findPosition() {
+        $('section').each(function () {
+            if (($(this).offset().top - $(window).scrollTop()) < 20) {
+                link.removeClass('active');
+                $('#navbar').find('[data-scroll="' + $(this).attr('id') + '"]').addClass('active');
+            }
+        });
+    }
+
+    findPosition();
+});
+
 // Scroll Animation
 window.sr = ScrollReveal();
 

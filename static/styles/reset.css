@@ -5,7 +5,7 @@ body{font-family: 'Noto Sans KR', sans-serif;
     word-break: keep-all;}
 a{text-decoration: none;color: var(--color-dadrk-gray);}ul,li{list-style: none;}img{width: 100%;max-width: 100%;}
 button{background: transparent; cursor: pointer; border: none; outline: none;}
-
+html {scroll-behavior: smooth; /* 부드러게 */}
 .container{width: 100%;max-width: 1100px;margin: auto;padding: 7rem 3rem;}
 
 :root{

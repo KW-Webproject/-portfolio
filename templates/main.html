@@ -6,11 +6,46 @@
     <link rel="stylesheet" href="../static/styles/main.css">
     <script src="https://kit.fontawesome.com/72c88d65e7.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+
     {% endblock %}
 </head>
 
 <body>
     {% block section %}
+    <nav id="navbar" class="navbar">
+        <ul class="navbar-menu">
+            <li>
+                <a data-scroll="main" href="#main" class="dot active">
+                    <span>Main</span>
+                </a>
+            </li>
+            <li>
+                <a data-scroll="about" href="#about" class="dot">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a data-scroll="petsitter" href="#petsitter" class="dot">
+                    <span>Petsitter</span>
+                </a>
+            </li>
+            <li>
+                <a data-scroll="colors" href="#colors" class="dot">
+                    <span>Service</span>
+                </a>
+            </li>
+            <li>
+                <a data-scroll="reservation" href="#reservation" class="dot">
+                    <span>Reservation</span>
+                </a>
+            </li>
+            <li>
+                <a data-scroll="contact" href="#map" class="dot">
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
     <section id="main">
         <div class="container white">
             <p class="text-lg white">by PETLAND</p>
@@ -263,6 +298,7 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY1HHWoGR4FY1pQQirukx7kn9l9dUQrds&callback&callback&callback=initMap">
         </script>
     <script src="../static/js/colors.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../static/js/scroll.js"></script>
     {% endblock %}
 </body>
