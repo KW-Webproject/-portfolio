@@ -66,7 +66,7 @@ form label{
     color: var(--color-black);
 }
 
-form input{
+/* form input{
     padding: .5rem 1rem;
     margin-bottom: 1rem;
     border: none;
@@ -74,9 +74,20 @@ form input{
     border-radius: 8px;
     color: var(--color-gray);
     background-color: rgba(197, 164, 126, .4);
-}
+} */
 
-.reservation_check__btn span{
+form input {
+    padding: 1.1rem;
+    margin: 1rem;
+    border: 1px solid var(--color-primary);
+    border-color: rgba(197, 164, 126, .4);
+    border-radius: 4px;
+    text-align: center;
+    width: 30.5rem;  
+    outline: none;
+    border-radius: 5px;
+}
+/* .reservation_check__btn span{
     font-weight: 700;
     border: 1px solid var(--color-primary);
     border-radius: 30px;
@@ -84,9 +95,19 @@ form input{
     transition: all 300ms ease-in;
     color: var(--color-primary);
     background: rgba(255, 255, 255, 0.3)
-}
+} */
 
-.reservation_check__btn span:hover{
+.reservation_check__btn{
+    font-weight: 700;
+    border: 1px solid var(--color-primary);
+    border-radius: 30px;
+    padding: 1rem 1.5rem;
+    transition: all 300ms ease-in;
+    color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.3);
+    margin-top: 15px;
+}
+.reservation_check__btn:hover{
     color: var(--color-gray);
     border-color: var(--color-gray);
     opacity: .7;

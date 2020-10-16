@@ -104,51 +104,52 @@ function checkAddr() {
 
 function toJson() {
 
-    $.fn.serializeObject = function () {
-        "use strict"
-        let result = {}
-        let extend = function (i, element) {
-            let node = result[element.name]
-            if ("undefined" !== typeof node && node !== null) {
-                if ($.isArray(node)) {
-                    node.push(element.value)
-                } else {
-                    result[element.name] = [node, element.value]
-                }
-            } else {
-                result[element.name] = element.value
-            }
-        }
+    // $.fn.serializeObject = function () {
+    //     "use strict"
+    //     let result = {}
+    //     let extend = function (i, element) {
+    //         let node = result[element.name]
+    //         if ("undefined" !== typeof node && node !== null) {
+    //             if ($.isArray(node)) {
+    //                 node.push(element.value)
+    //             } else {
+    //                 result[element.name] = [node, element.value]
+    //             }
+    //         } else {
+    //             result[element.name] = element.value
+    //         }
+    //     }
 
-        $.each(this.serializeArray(), extend)
-        return result
-    }
-
-
-    const object = $('form[id=form]').serializeObject();
-
-    toString(object);
-    const json = JSON.stringify(object);
-    console.log(json);
-    const test = "test";
-
-    alert(`입력한 정보가 ${json}이 맞습니까?`);
+    //     $.each(this.serializeArray(), extend)
+    //     return result
+    // }
 
 
-    $.ajax({
-        type: 'post',
-        url: 'localhost:5001/test',
-        contentType: 'application/plain',
-        data: test,
-        dataType: 'text',
-        error: function (error) {
-            console.log(error);
-        },
-        success: function () {
-            console.log("성공!");
-            // window.location = "localhost:5001/test"
-        }
-    });
+    // const object = $('form[id=form]').serializeObject();
+
+    // toString(object);
+    // const json = JSON.stringify(object);
+    // console.log(json);
+    // const test = "test";
+
+    // alert(`입력한 정보가 ${json}이 맞습니까?`);
+
+    const form = document.form;
+    form.submit();
+    // $.ajax({
+    //     type: 'post',
+    //     url: 'localhost:5001/test',
+    //     contentType: 'application/plain',
+    //     data: test,
+    //     dataType: 'text',
+    //     error: function (error) {
+    //         console.log(error);
+    //     },
+    //     success: function () {
+    //         console.log("성공!");
+    //         // window.location = "localhost:5001/test"
+    //     }
+    // });
 };
 
 function toString(object) {

@@ -82,12 +82,45 @@ def reservation():
     return render_template("reservation.html")
 
 
-@app.route("/test", methods=['POST'])
+@app.route("/reservation", methods=['POST'])
 def test():
-    data = request.get_json()
-    print(data)
-    
-    return data
+    name = request.form['name']
+    phone = request.form['phone']
+    pet = request.form['pet']
+    service = request.form.getlist('service')
+    date = request.form['date']
+    time = request.form.getlist('time')
+    postcode = request.form['postcode']
+    roadaddress = request.form['roadaddress']
+    detailaddress = request.form['detailaddress']
+    if len(service) > 1:
+        service = ",".join(service)
+    else:
+        service = service[0]
+
+    if len(time) > 1:
+        time = ",".join(time)
+    else:
+        time = time[0]
+        
+    roadaddress = roadaddress.split()
+    roadaddress = roadaddress[:2]
+    roadaddress = " ".join(roadaddress)
+
+    formData = []
+    formData.append(name)
+    formData.append(phone)
+    formData.append(pet)
+    formData.append(service)
+    formData.append(date)
+    formData.append(time)
+    formData.append(postcode)
+    formData.append(roadaddress)
+    formData.append(detailaddress)
+
+    print(formData)
+
+    return render_template("test.html",content = formData)
 
 # @app.route("/reservation")
 # def reservation():

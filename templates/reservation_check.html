@@ -19,18 +19,16 @@
                 <h1 class="text-extra-lg">예약조회 / 취소</h1>
                 <div class="line"></div>
             </div>
-            <form action="" method="POST" class="text-md">
+            <form action="/reservation_check" method="POST" class="text-md">
                 <label for="name">이름</label>
                 <input type="text" name="name" id="name" required>
                 <br>
                 <label for="phone">전화번호</label>
-                <input type="tel" name="phone" id="phone" placeholder="123-4567-8910"
-                    pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required>
+                <input type="tel" name="phone" id="phone" placeholder="번호만 입력하세요" pattern="[0-9]{3}[0-9]{4}[0-9]{4}"
+                    required>
                 <br>
                 <div class="line"></div>
-                <button type="submit" class="reservation_check__btn">
-                    <span class="text-md">예약확인</span>
-                </button>
+                <button type="button" class="reservation_check__btn">예약확인</button>
             </form>
         </div>
     </section>
