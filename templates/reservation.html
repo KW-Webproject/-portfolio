@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="kr">
+{% extends "base.html" %}
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block extrahead %}
     <title>Document</title>
     <link rel="stylesheet" href="../static/styles/reservation.css">
     <script src="https://kit.fontawesome.com/72c88d65e7.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {% endblock %}
 </head>
 
 <body>
+    {% block section %}
     <section id="form">
         <div class="sistemap">
             <p class="text-md-form">PETLAND > 예약하기</p>
@@ -137,7 +137,10 @@
                 <button class="Enter submitBtn" type="button">Petsitter 예약하기</button>
             </form>
         </div>
+        {% endblock %}
+        {% block script %}
         <script src="../static/js/form.js"></script>
+        {% endblock %}
     </section>
 </body>
 

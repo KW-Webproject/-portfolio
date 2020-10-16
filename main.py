@@ -1,10 +1,9 @@
 from flask import Flask, render_template, request, redirect, json
 # import mariadb
 # import sys
-from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
+
 # main service reservation search
 
 

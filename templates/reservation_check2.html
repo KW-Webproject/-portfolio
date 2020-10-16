@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+<head>
+    {% block extrahead %}
+    <title>Petland</title>
+    <link rel="stylesheet" href="../static/styles/reservation2.css">
+    {% endblock %}
+</head>
+
+<body>
+    {% block section %}
+    <section id="form">
+        <div class="sistemap">
+            <p class="text-md">PETLAND > 예약정보확인</p>
+        </div>
+        <div class="container">
+            <div class="title">
+                <h1 class="text-extra-lg">예약정보</h1>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="container"></div>
+        <h2 class="check">예약확인</h2><br>
+        <table>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>이름</th>
+                    <th>반려동물</th>
+                    <th>서비스</th>
+                    <th>예약일</th>
+                    <th>예약시간</th>
+                    <th>펫시터</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <button class="Enter cancleBtn" type="button">예약 취소하기</button>
+        </div>
+    </section>
+    {% endblock %}
+</body>
+
+</html>

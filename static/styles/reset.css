@@ -196,16 +196,17 @@ html {scroll-behavior: smooth; /* 부드러게 */}
     top: -2rem;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 10;
 }
 
 .footer__button i {
     display: block;
     font-size: 1.5rem;
     background: #e3dede;
-    padding: 1rem;
+    line-height: 4.5rem;
     border: none;
-    border-radius: 50%;
     color: var(--color-gray);
+    border-radius: 50%;
 }
 
 .footer__content{

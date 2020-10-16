@@ -21,6 +21,7 @@ input{
 
 #form .container{
     padding: 1rem 3rem;
+    border-color: rgba(197, 164, 126, .4);
 }
 
 #form .container.two{
@@ -290,3 +291,4 @@ form input{
     width: 30.5rem;
     text-align: left;
 }
+

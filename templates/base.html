@@ -19,11 +19,11 @@
             </div>
             <nav class="header__nav">
                 <ul class="nav__menu text-sm">
-                    <li class="nav__item selected"><a href="#">홈</a></li>
-                    <li class="nav__item"><a href="#">서비스 소개</a></li>
-                    <li class="nav__item"><a href="#">예약하기</a></li>
-                    <li class="nav__item"><a href="#">예약 확인</a></li>
-                    <li class="nav__item"><a href="#">연락하기</a></li>
+                    <li class="nav__item selected"><a href="main.html">홈</a></li>
+                    <li class="nav__item"><a href="#about">서비스 소개</a></li>
+                    <li class="nav__item"><a href="/reservation">예약하기</a></li>
+                    <li class="nav__item"><a href="/reservation_check">예약 확인</a></li>
+                    <li class="nav__item"><a href="#map">연락하기</a></li>
                 </ul>
                 <div class="nav_toggle text-sm">
                     <i class="fas fa-bars"></i>
@@ -37,7 +37,7 @@
     <footer id="footer">
         <div class="container">
             <div class="footer__button">
-                <a href="#header"><i class="fas fa-chevron-up"></i></a>
+                <a href=""><i class="fas fa-chevron-up"></i></a>
             </div>
             <div class="footer__content">
                 <h1 class="text-extra-lg white">펫랜드</h1>
@@ -88,19 +88,20 @@
     <script>
         const header = document.querySelector("#header");
         const headerHeight = header.getBoundingClientRect().height;
-
+        const footerBtn = document.querySelector(".footer__button");
         window.addEventListener("scroll", () => {
             if (window.scrollY > headerHeight) {
-                header.setAttribute("style", "background: white;")
+                header.setAttribute("style", "background: white;");
                 console.log("big");
             } else {
 
-                header.setAttribute("style", "background: transparent;")
+                header.setAttribute("style", "background: transparent;");
             }
         });
-        console.log(header);
-        console.log(headerHeight);
-        console.log(window.scrollY);
+
+        footerBtn.addEventListener("click", () => {
+            header.scrollIntoView({ behavior: 'smooth' });
+        });
     </script>
     {% block script %}
     {% endblock %}

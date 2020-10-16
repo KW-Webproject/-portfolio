@@ -19,7 +19,7 @@
                 <h1 class="text-extra-lg">예약조회 / 취소</h1>
                 <div class="line"></div>
             </div>
-            <form action="/reservation_check" method="POST" class="text-md">
+            <form action="/reservation_check" name="form" method="POST" class="text-md">
                 <label for="name">이름</label>
                 <input type="text" name="name" id="name" required>
                 <br>
@@ -32,5 +32,25 @@
             </form>
         </div>
     </section>
+    {% endblock %}
+    {% block script %}
+    <script>
+        const button = document.querySelector(".reservation_check__btn");
+        button.addEventListener("click", () => {
+            if (noValue()) {
+                const form = document.form;
+                form.submit();
+            }
+        });
+        function noValue() {
+            let name = document.querySelector("#name").value;
+            let phone = document.querySelector("#phone").value;
+
+            if (name == "" || phone == "") {
+                alert("정보를 모두 입력해주세요.");
+                return false;
+            }
+        }
+    </script>
     {% endblock %}
 </body>
