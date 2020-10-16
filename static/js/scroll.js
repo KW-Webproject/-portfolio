@@ -1,5 +1,13 @@
+// Scroll Button
 
+const downBtn = document.querySelector(".down_button");
 
+downBtn.addEventListener("click", () => {
+    console.log("hi");
+    const target = document.querySelector("#about");
+    target.scrollIntoView({ behavior: 'smooth' });
+})
+// Scroll Animation
 window.sr = ScrollReveal();
 
 sr.reveal('.animate-top', {

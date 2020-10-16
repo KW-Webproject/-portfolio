@@ -1,6 +1,7 @@
 const color = document.querySelector(".colors__bottom");
 const button = document.querySelectorAll(".full__top i");
 const fullpages = document.querySelectorAll(".colors__full");
+const body = document.querySelector("body")
 let flag = false; // 4컷 false!
 
 color.addEventListener("click", (e) => {
@@ -10,6 +11,7 @@ color.addEventListener("click", (e) => {
         return;
     }
     color.classList.add("dontclick");
+    scrollDisable();
     target.classList.remove("hide");
 });
 
@@ -23,6 +25,12 @@ function addHide(target) {
 
         }
     })
+}
+
+function scrollDisable() {
+    window.addEventListener("mousewheel", (e) => {
+        e.preventDefault();
+    });
 }
 
 // 1. color__bottom을 클릭하면 => 먼저 color__bottom 클릭이 안되게 하고, target의 hide를 제거한다.
