@@ -33,11 +33,11 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>{{ name }}</td>
-                    <td>{{ pet }}</td>
-                    <td>{{ service }}</td>
-                    <td>{{ date }}</td>
-                    <td>{{ time }}</td>
+                    <td>{{ name | safe }}</td>
+                    <td>{{ pet | safe }}</td>
+                    <td>{{ service | safe }}</td>
+                    <td>{{ date | safe }}</td>
+                    <td>{{ time | safe }}</td>
                 </tr>
             </tbody>
         </table>

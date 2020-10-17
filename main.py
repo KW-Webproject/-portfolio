@@ -1,22 +1,17 @@
 from flask import Flask, render_template, request, redirect, json
-# import mariadb
-# import sys
+import mariadb
+import sys
 
 app = Flask(__name__)
 
-# main service reservation search
 
-
-# def get_conn():
-#     conn = mariadb.connect(
-#         user="root",
-#         password="000000",
-#         host="193.123.233.236",
-#         port=3306,
-#         database="test"
-#     )
-#     return conn
-
+def get_conn():
+    conn = mariadb.connect(user="root",
+                           password="000000",
+                           host="193.123.233.236",
+                           port=3306,
+                           database="petland")
+    return conn
 
 # conn = get_conn()
 # cur = conn.cursor()
@@ -92,6 +87,14 @@ def test():
     postcode = request.form['postcode']
     roadaddress = request.form['roadaddress']
     detailaddress = request.form['detailaddress']
+
+    # 지역(구)를 먼저 빼와서 DB와 비교
+    roadaddress = roadaddress.split()
+    print(roadaddress)
+    str_addr = roadaddress[0]
+
+    # 펫시터가 존재하면 p_id와 p_name을 저장
+    check_sitter = check_res(str_addr) 
     if len(service) > 1:
         service = ",".join(service)
     else:
@@ -101,10 +104,6 @@ def test():
         time = ",".join(time)
     else:
         time = time[0]
-        
-    roadaddress = roadaddress.split()
-    roadaddress = roadaddress[:2]
-    roadaddress = " ".join(roadaddress)
 
     formData = []
     formData.append(name)
@@ -118,18 +117,30 @@ def test():
     formData.append(detailaddress)
 
     print(formData)
-
-    return render_template("test.html",content = formData)
-
-# @app.route("/reservation")
-# def reservation():
-#     return render_template('reservation.html')
-
-
-# @app.route("/search")
-# def search():
-#     return
-
+    if check_sitter != 0:
+        return render_template("reservation2.html", 
+        name = name, pet = pet,
+        service = service, date = date,
+        time = time)
+    else:
+        return "펫시터가 없습니다."
+        
+# 입력된 주소로 펫시터가 있는지 체크한다.
+def check_res(search_local):
+    r_id = ""
+    sql = """
+        SELECT p_id, p_name FROM pet_sitter WHERE p_local = "{}"
+    """.format(search_local)
+    conn = get_conn()
+    cur = conn.cursor()
+    cur.execute(sql)
+    r_id = cur.fetchone()
+    if r_id == None:
+        return 0 
+    else:
+        return r_id
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=True, port=5001)
+    app.run(host='0.0.0.0', debug=True)
+    local = "영등포구"
+
