@@ -37,20 +37,24 @@
     <script>
         const button = document.querySelector(".reservation_check__btn");
         button.addEventListener("click", () => {
-            if (noValue()) {
-                const form = document.form;
-                form.submit();
-            }
-        });
-        function noValue() {
-            let name = document.querySelector("#name").value;
-            let phone = document.querySelector("#phone").value;
+            const form = document.form;
+            form.submit();
+        //     if (noValue()) {
+        //         const form = document.form;
+        //         form.submit();
+        //     }
+        // });
+        // function noValue() {
+        //     let name = document.querySelector("#name").value;
+        //     let phone = document.querySelector("#phone").value;
 
-            if (name == "" || phone == "") {
-                alert("정보를 모두 입력해주세요.");
-                return false;
-            }
-        }
+        //     if (name == "" || phone == "") {
+        //         alert("정보를 모두 입력해주세요.");
+        //         return false;
+        //     }
+        //     return 1;
+        })
     </script>
     {% endblock %}
 </body>
+</html>
