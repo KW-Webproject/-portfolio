@@ -142,7 +142,9 @@
     {% block script %}
     <script>
         let err = "{{ err | safe}}";
-        alert(err);
+        if (!(err == "")) {
+            alert(err);
+        }
         console.log(err);
     </script>
     <script src="../static/js/form.js"></script>

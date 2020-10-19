@@ -36,8 +36,10 @@
     {% block script %}
     <script>
         const button = document.querySelector(".reservation_check__btn");
-        let err = "{{ err | safe}}";
-        alert(err);
+        let err = "{{ err | safe }}";
+        if (!(err == "")) {
+            alert(err);
+        }
         button.addEventListener("click", () => {
             // const form = document.form;
             // form.submit();

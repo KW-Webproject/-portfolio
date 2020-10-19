@@ -118,14 +118,13 @@ def receive_form():
     # 펫시터가 존재하면 p_id와 p_name을 저장
     check_sitter = check_add(str_addr)
     print(check_sitter)
-
-    err = "펫시터가 없음"
     if check_sitter != 0:
         return render_template("reservation2.html",
                                name=name, pet=pet,
                                service=service, date=date,
-                               time=time, err=err)
+                               time=time)
     else:
+        err = "펫시터가 없음"
         return render_template("reservation.html", err=err)
 
 
