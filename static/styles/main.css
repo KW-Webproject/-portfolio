@@ -610,3 +610,29 @@
     85% {margin-left:-300%;}
     100% {margin-left:0;}
   }
+
+
+@media screen and (max-width: 992px){
+    #petsitter{
+        display:none;
+    }
+    #map{
+        display: none;
+    }
+    #about{
+        display: none;
+    }
+
+    .colors > img{
+        height: 300px;
+    }
+    #main{
+        padding-bottom: 300px;
+    }
+}
+
+@media (max-width: 688px){
+    .colors__bottom{
+        display: initial;
+    }
+}
