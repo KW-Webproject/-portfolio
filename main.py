@@ -141,7 +141,8 @@ def check_submit():
     print(name, phone)
     user_info = check_phone(phone, name)
     if len(user_info) == 0:
-        return "예약정보가 없습니다."
+        err = "예약정보가 없습니다."
+        return render_template("reservation_check.html", err=err)
     else:
         print(user_info)
         return "조회가 되었다"
