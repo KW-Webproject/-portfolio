@@ -66,6 +66,13 @@
         };
     </script>
     {% endblock %}
+    {% block script %}
+    <script>
+        let err = "{{ err | safe}}";
+        alert(err);
+        console.log(err);
+    </script>
+    {% endblock %}
 </body>
 
 </html>

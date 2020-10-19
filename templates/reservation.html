@@ -137,16 +137,16 @@
                 <button class="Enter submitBtn" type="button">Petsitter 예약하기</button>
             </form>
         </div>
-        {% endblock %}
-        {% block script %}
-        <script>
-            let err = "{{ err | safe}}";
-            alert(err);
-            console.log(err);
-        </script>
-        <script src="../static/js/form.js"></script>
-        {% endblock %}
     </section>
+    {% endblock %}
+    {% block script %}
+    <script>
+        let err = "{{ err | safe}}";
+        alert(err);
+        console.log(err);
+    </script>
+    <script src="../static/js/form.js"></script>
+    {% endblock %}
 </body>
 
 </html>
