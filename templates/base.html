@@ -19,7 +19,7 @@
             </div>
             <nav class="header__nav">
                 <ul class="nav__menu text-sm">
-                    <li class="nav__item selected"><a href="main.html">홈</a></li>
+                    <li class="nav__item"><a class="selected" href="main.html">홈</a></li>
                     <li class="nav__item"><a href="#about">서비스 소개</a></li>
                     <li class="nav__item"><a href="/reservation">예약하기</a></li>
                     <li class="nav__item"><a href="/reservation_check">예약 확인</a></li>
@@ -89,6 +89,9 @@
         const header = document.querySelector("#header");
         const headerHeight = header.getBoundingClientRect().height;
         const footerBtn = document.querySelector(".footer__button");
+        const navbar = document.querySelector(".nav__menu");
+        let current = document.querySelector(".selected");
+
         window.addEventListener("scroll", () => {
             if (window.scrollY > headerHeight) {
                 header.setAttribute("style", "background: white;");
@@ -102,9 +105,18 @@
         footerBtn.addEventListener("click", () => {
             header.scrollIntoView({ behavior: 'smooth' });
         });
+
+        navbar.addEventListener("click", (e) => {
+            const target = e.target;
+            console.log(target);
+            current.classList.remove("selected");
+            console.log(current);
+            target.classList.add("selected");
+            current = target;
+            console.log(current);
+        });
     </script>
-    {% block script %}
-    {% endblock %}
+
 </body>
 
 </html>

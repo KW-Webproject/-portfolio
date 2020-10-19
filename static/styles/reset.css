@@ -87,7 +87,7 @@ html {scroll-behavior: smooth; /* 부드러게 */}
 }
 
 .nav__item:hover,
-.nav__item.selected {
+.nav__item .selected {
     color: var(--color-primary);
 }
 
