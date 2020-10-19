@@ -36,23 +36,16 @@
     {% block script %}
     <script>
         const button = document.querySelector(".reservation_check__btn");
-        let err = {{ err| safe}};
-
-        if (err == "") {
-            alert("일치하는 예약 정보가 없습니다.");
-            button.addEventListener("click", () => {
-                alert("일치하는 예약 정보가 없습니다.");
-            });
-        } else {
-            button.addEventListener("click", () => {
-                // const form = document.form;
-                // form.submit();
-                if (noValue()) {
-                    const form = document.form;
-                    form.submit();
-                }
-            });
-        }
+        let err = "{{ err | safe}}";
+        alert(err);
+        button.addEventListener("click", () => {
+            // const form = document.form;
+            // form.submit();
+            if (noValue()) {
+                const form = document.form;
+                form.submit();
+            }
+        });
 
         function noValue() {
             let name = document.querySelector("#name").value;
@@ -64,13 +57,6 @@
             }
             return true;
         };
-    </script>
-    {% endblock %}
-    {% block script %}
-    <script>
-        let err = "{{ err | safe}}";
-        alert(err);
-        console.log(err);
     </script>
     {% endblock %}
 </body>
