@@ -18,7 +18,7 @@ let commit = false; // true가 되어야 submitBtn 작동
 button.addEventListener('click', () => {
 
     if (checkName() && checkPhone() && checkChecked() && checkAddr()) {
-        toJson();
+        toSubmit();
     }
 });
 
@@ -102,66 +102,9 @@ function checkAddr() {
     return true;
 }
 
-function toJson() {
-
-    // $.fn.serializeObject = function () {
-    //     "use strict"
-    //     let result = {}
-    //     let extend = function (i, element) {
-    //         let node = result[element.name]
-    //         if ("undefined" !== typeof node && node !== null) {
-    //             if ($.isArray(node)) {
-    //                 node.push(element.value)
-    //             } else {
-    //                 result[element.name] = [node, element.value]
-    //             }
-    //         } else {
-    //             result[element.name] = element.value
-    //         }
-    //     }
-
-    //     $.each(this.serializeArray(), extend)
-    //     return result
-    // }
-
-
-    // const object = $('form[id=form]').serializeObject();
-
-    // toString(object);
-    // const json = JSON.stringify(object);
-    // console.log(json);
-    // const test = "test";
-
-    // alert(`입력한 정보가 ${json}이 맞습니까?`);
+function toSubmit() {
 
     const form = document.form;
     form.submit();
-    // $.ajax({
-    //     type: 'post',
-    //     url: 'localhost:5001/test',
-    //     contentType: 'application/plain',
-    //     data: test,
-    //     dataType: 'text',
-    //     error: function (error) {
-    //         console.log(error);
-    //     },
-    //     success: function () {
-    //         console.log("성공!");
-    //         // window.location = "localhost:5001/test"
-    //     }
-    // });
-};
 
-function toString(object) {
-    let objectType = typeof (object.time);
-    console.log(objectType);
-    if (typeof (object.time) == "object") {
-        object.time = object.time.join(",");
-    }
-    if (typeof (object.service) == "object") {
-        console.log(object.service);
-        object.service = object.service.join(",");
-        return object;
-    }
-    return object;
-}
+};

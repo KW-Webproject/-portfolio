@@ -46,6 +46,21 @@
         </div>
     </section>
     {% endblock %}
+    {% block script%}
+    <script>
+        const button = document.querySelector(".payBtn");
+        let err = {{ err | safe }};
+        console.log(err);
+        if (err == "") {
+            alert("매칭되는 펫시터 정보가 없습니다.");
+            button.addEventListener("click", () => {
+                alert("매칭되는 펫시터 정보가 없습니다.");
+            });
+        } else {
+            return;
+        }
+    </script>
+    {% endblock %}
 </body>
 
 </html>
