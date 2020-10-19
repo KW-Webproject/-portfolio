@@ -139,6 +139,11 @@
         </div>
         {% endblock %}
         {% block script %}
+        <script>
+            let err = "{{ err | safe}}";
+            alert(err);
+            console.log(err);
+        </script>
         <script src="../static/js/form.js"></script>
         {% endblock %}
     </section>

@@ -77,7 +77,7 @@ def reservation():
 
 
 @app.route("/reservation", methods=['POST'])
-def test():
+def receive_form():
     name = request.form['name']
     phone = request.form['phone']
     pet = request.form['pet']
@@ -88,13 +88,6 @@ def test():
     roadaddress = request.form['roadaddress']
     detailaddress = request.form['detailaddress']
 
-    # 지역(구)를 먼저 빼와서 DB와 비교
-    roadaddress = roadaddress.split()
-    print(roadaddress)
-    str_addr = roadaddress[1]
-
-    # 펫시터가 존재하면 p_id와 p_name을 저장
-    check_sitter = check_add(str_addr)
     if len(service) > 1:
         service = ",".join(service)
     else:
@@ -115,15 +108,25 @@ def test():
     formData.append(postcode)
     formData.append(roadaddress)
     formData.append(detailaddress)
-
+    # formData.append(name, phone, pet, service)
     print(formData)
+
+    # 지역(구)를 먼저 빼와서 DB와 비교
+    roadaddress = roadaddress.split()
+    print(roadaddress)
+    str_addr = roadaddress[1]
+    # 펫시터가 존재하면 p_id와 p_name을 저장
+    check_sitter = check_add(str_addr)
+    print(check_sitter)
+
+    err = "펫시터가 없음"
     if check_sitter != 0:
         return render_template("reservation2.html",
                                name=name, pet=pet,
                                service=service, date=date,
-                               time=time)
+                               time=time, err=err)
     else:
-        return "펫시터가 없습니다."
+        return render_template("reservation.html", err=err)
 
 
 @app.route("/reservation_check")
@@ -173,6 +176,18 @@ def check_phone(user_phone, user_name):
         user_info += i
     print(user_info)
     return user_info
+
+# 결제하기 했을 때 예약자의 데이터를 저장
+
+
+def payment_save():
+    return
+
+# 조회가 되었을 시
+
+
+def inquiry_return():
+    return
 
 
 if __name__ == "__main__":
