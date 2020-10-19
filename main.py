@@ -94,7 +94,7 @@ def test():
     str_addr = roadaddress[1]
 
     # 펫시터가 존재하면 p_id와 p_name을 저장
-    check_sitter = check_add(str_addr) 
+    check_sitter = check_add(str_addr)
     if len(service) > 1:
         service = ",".join(service)
     else:
@@ -118,16 +118,18 @@ def test():
 
     print(formData)
     if check_sitter != 0:
-        return render_template("reservation2.html", 
-        name = name, pet = pet,
-        service = service, date = date,
-        time = time)
+        return render_template("reservation2.html",
+                               name=name, pet=pet,
+                               service=service, date=date,
+                               time=time)
     else:
         return "펫시터가 없습니다."
+
 
 @app.route("/reservation_check")
 def reservation_check():
     return render_template("reservation_check.html")
+
 
 @app.route("/reservation_check", methods=['POST'])
 def check_submit():
@@ -142,6 +144,8 @@ def check_submit():
         return "조회가 되었다"
 
 # 입력된 주소로 펫시터가 있는지 체크한다.
+
+
 def check_add(search_local):
     r_id = ""
     sql = """
@@ -152,13 +156,14 @@ def check_add(search_local):
     cur.execute(sql)
     r_id = cur.fetchone()
     if r_id == None:
-        return 0 
+        return 0
     else:
         return r_id
 
+
 def check_phone(user_phone, user_name):
-    user_info = [] 
-    sql ="""
+    user_info = []
+    sql = """
         SELECT * FROM reservation WHERE phone = "{}" AND name= "{}"
         """.format(user_phone, user_name)
     conn = get_conn()
@@ -167,8 +172,8 @@ def check_phone(user_phone, user_name):
     for i in cur:
         user_info += i
     print(user_info)
-    return user_info 
+    return user_info
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
-
