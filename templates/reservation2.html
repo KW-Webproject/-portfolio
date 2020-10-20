@@ -41,11 +41,20 @@
             </tbody>
         </table>
         <br>
-        <form action="/reservation2" method="GET">
+        <form action="/reservation2" method="POST" name="form">
             <button class="Enter payBtn" type="button">결제하기</button>
         </form>
         </div>
     </section>
+    {% endblock %}
+    {% block script %}
+    <script>
+        const button = document.querySelector(".payBtn");
+        button.addEventListener('click', () => {
+        const form = document.form;
+        form.submit();
+        });
+    </script>
     {% endblock %}
 </body>
 
