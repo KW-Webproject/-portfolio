@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petland</title>
-    <link rel="stylesheet" href="../static/styles/main.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
     <script src="https://kit.fontawesome.com/72c88d65e7.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 
@@ -156,7 +156,7 @@
         <div class="colors__bottom animate-bottom">
             <div class="color-left">
                 <a class="colors cherry">
-                    <img src="../static/img/cherry.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/cherry.jpg') }}">
                     <div class="colors__description">
                         <p class="logo white">모든 산책 과정을<br> 실시간 Live로 보세요</p>
                     </div>
@@ -172,7 +172,7 @@
                         </div>
                         <div class="full__bottom">
                             <div class="full__img">
-                                <img src="../static/img/cherry.jpg" alt="">
+                                <img src="{{ url_for('static', filename='img/cherry.jpg') }}">
                             </div>
                             <div class="text-lg white">
                                 산책 서비스에만 있는 특별한 기능, 실시간 GPS 이동경로를 경험해보세요
@@ -185,7 +185,7 @@
                     </div>
                 </a>
                 <a class="colors orange">
-                    <img src="../static/img/orange.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/orange.jpg') }}">
                     <div class="colors__description">
                         <p class="logo white">언제 어디서든<br> 펫시터를 부르세요</p>
                     </div>
@@ -201,7 +201,7 @@
                         </div>
                         <div class="full__bottom">
                             <div class="full__img">
-                                <img src="../static/img/orange.jpg" alt="">
+                                <img src="{{ url_for('static', filename='img/orange.jpg') }}">
                             </div>
                             <div class="text-lg white">
                                 강아지의 삶에 가장 중요한 산책을 바쁜 일상으로 인해 자주 미루셨나요?<br>
@@ -214,7 +214,7 @@
             </div>
             <div class="color-right">
                 <a class="colors gray">
-                    <img src="../static/img/gray.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/gray.jpg') }}">
                     <div class="colors__description">
                         <p class="logo white">안전한 산책과 함께<br> 깔끔한 마무리</p>
                     </div>
@@ -230,7 +230,7 @@
                         </div>
                         <div class="full__bottom">
                             <div class="full__img">
-                                <img src="../static/img/gray.jpg" alt="">
+                                <img src="{{ url_for('static', filename='img/gray.jpg') }}">
                             </div>
                             <div class="text-lg white">
                                 펫랜드의 모든 펫시터는 문화교육원의 산책 전문 교육을 수료하였으며, <br>
@@ -241,7 +241,7 @@
                     </div>
                 </a>
                 <a class="colors yellow">
-                    <img src="../static/img/yellow.jpg" alt="">
+                    <img src="{{ url_for('static', filename='img/yellow.jpg') }}">
                     <div class="colors__description">
                         <p class="logo white">반려동물 성향에 맞춰<br> 섬세하게 돌봐드려요</p>
                     </div>
@@ -257,7 +257,7 @@
                         </div>
                         <div class="full__bottom">
                             <div class="full__img">
-                                <img src="../static/img/yellow.jpg" alt="">
+                                <img src="{{ url_for('static', filename='img/yellow.jpg') }}">
                             </div>
                             <div class="text-lg white">
                                 사람을 좋아하는 댕댕이부터, 낯선 사람을 무서워 하는 소심냥까지<br>
@@ -300,8 +300,8 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY1HHWoGR4FY1pQQirukx7kn9l9dUQrds&callback&callback&callback=initMap">
         </script>
-    <script src="../static/js/colors.js"></script>
+    <script src="{{ url_for('static', filename='js/colors.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../static/js/scroll.js"></script>
+    <script src="{{ url_for('static', filename='js/scroll.js') }}"></script>
     {% endblock %}
 </body>

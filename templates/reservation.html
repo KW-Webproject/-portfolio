@@ -3,7 +3,7 @@
 <head>
     {% block extrahead %}
     <title>Document</title>
-    <link rel="stylesheet" href="../static/styles/reservation.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/reservation.css') }}">
     <script src="https://kit.fontawesome.com/72c88d65e7.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     {% endblock %}
@@ -115,9 +115,9 @@
                                 document.getElementById("roadaddress").value = roadAddr
 
                                 if (roadAddr !== '') {
-                                    document.getElementById("detailaddress").value = extraRoadAddr;
+                                    document.getElementById("extraaddress").value = extraRoadAddr;
                                 } else {
-                                    document.getElementById("detailaddress").value = '';
+                                    document.getElementById("extraaddress").value = '';
                                 }
 
                                 var guideTextBox = document.getElementById("guide");
@@ -147,7 +147,7 @@
         }
         console.log(err);
     </script>
-    <script src="../static/js/form.js"></script>
+    <script src="{{ url_for('static', filename='js/form.js') }}"></script>
     {% endblock %}
 </body>
 
