@@ -5,6 +5,9 @@ import sys
 app = Flask(__name__)
 
 
+# class User():
+
+
 def get_conn():
     conn = mariadb.connect(user="root",
                            password="000000",
@@ -205,6 +208,14 @@ def check_phone(user_phone, user_name):
         cur.execute(sql)
         for i in cur:
             user_info += i
+        # pet_sitter 테이블에서 possible colum을 빼온다
+
+        sql = """
+            SELECT
+        """
+        conn = get_conn()
+        cur = conn.cursor()
+        cur.execute(sql)
         print(user_info)
     except mariadb.Error as e:
         print("ERR : {}".format(e))
