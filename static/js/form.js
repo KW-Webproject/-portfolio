@@ -1,3 +1,4 @@
+//Reservation-Form-Validation AND Submit
 
 const button = document.querySelector(".submitBtn");
 const form = document.forms[0];
@@ -12,8 +13,6 @@ const pattern_spc = /[~!@#$%^&*()_+|<>?:{}]/;
 const pattern_num = /[0-9]/;
 const pattern_eng = /[a-zA-Z]/;
 const pattern_kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
-
-let commit = false; // true가 되어야 submitBtn 작동
 
 button.addEventListener('click', () => {
 

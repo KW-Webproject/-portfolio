@@ -172,7 +172,7 @@ html {scroll-behavior: smooth; /* 부드러게 */}
     top: -2rem;
     left: 50%;
     transform: translateX(-50%);
-    /* z-index: 10; */
+    z-index: 10;
 }
 
 .footer__button i {
@@ -276,6 +276,10 @@ html {scroll-behavior: smooth; /* 부드러게 */}
         transform: translateY(-25%);
     } 
 
+    .nav__toggle .fa-times{
+        display: none;
+    }
+
     .fa-bars{
         display: block;
     }
@@ -299,10 +303,6 @@ html {scroll-behavior: smooth; /* 부드러게 */}
         font-weight: 1.6;
         z-index: 1250;
         
-    }
-
-    #footer{
-        margin-top: 100px;
     }
 
     .footer__button{

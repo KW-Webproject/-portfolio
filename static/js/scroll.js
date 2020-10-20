@@ -1,4 +1,4 @@
-// Scroll Button
+//Main-Down-Button
 
 const downBtn = document.querySelector(".down_button");
 
@@ -7,7 +7,7 @@ downBtn.addEventListener("click", () => {
     target.scrollIntoView({ behavior: 'smooth' });
 })
 
-// Navigation
+//Side-Navigation
 
 $(function () {
 
@@ -41,7 +41,7 @@ $(function () {
     findPosition();
 });
 
-// Scroll Animation
+// Scroll-Animation
 window.sr = ScrollReveal();
 
 sr.reveal('.animate-top', {
@@ -125,7 +125,7 @@ sr.reveal('.animate-top-3', {
 sr.reveal('.animate-top-button', {
     origin: 'top',
     duration: 1000,
-    distance: '25rem',
+    distance: '10rem',
     delay: 400
 });
 
