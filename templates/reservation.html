@@ -2,7 +2,7 @@
 
 <head>
     {% block extrahead %}
-    <title>Document</title>
+    <title>Petland > 예약하기</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/reservation.css') }}">
     <script src="https://kit.fontawesome.com/72c88d65e7.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -13,7 +13,6 @@
     {% block section %}
     <section id="form">
         <div class="sistemap">
-            <p class="text-md-form">PETLAND > 예약하기</p>
         </div>
         <div class="container">
             <div class="title">
@@ -43,7 +42,6 @@
                     <input type="radio" id="pet" name="pet" value="cat" />고양이
                 </label>
                 <br>
-                <div class="subline"></div>
 
                 <!-- service -->
                 <span class="service_main item">서비스</span><br>
@@ -89,11 +87,11 @@
                 </div>
                 <span class="address_main item">우편</span><br>
                 <input class="address_im" type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
-                <input class="address_postcode" type="text" id="postcode" name="postcode" placeholder="우편번호"><br>
-                <input class="address_road" type="text" id="roadaddress" name="roadaddress" placeholder="도로명주소"><br>
+                <input class="address_postcode" type="text" id="postcode" name="postcode" placeholder="우편번호" readonly><br>
+                <input class="address_road" type="text" id="roadaddress" name="roadaddress" placeholder="도로명주소" readonly><br>
                 <span id="guide" style="color:#999;display:none"></span>
                 <input class="address_detail" type="text" id="detailaddress" name="detailaddress" placeholder="상세주소"
-                    required><br>
+                    required readonly><br>
 
                 <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
                 <script>

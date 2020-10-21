@@ -5,7 +5,7 @@
 
  /* Main*/ 
 #main{
-    background: url(../img/main_home.png) center/cover no-repeat;
+    background: url(../img/main_home.jpg) center/cover no-repeat;
     width: 100%;
 }   
 #main .container {
@@ -175,10 +175,10 @@
 }
 
 .slide li{width:calc(100% / 4);height:500px;}
-.slide li:nth-child(1){background: url("../img/main_about_1.png") no-repeat center/cover;}
-.slide li:nth-child(2){background: url("../img/main_about_2.png") no-repeat center/cover;}
-.slide li:nth-child(3){background: url("../img/main_about_3.png") no-repeat center/cover;}
-.slide li:nth-child(4){background: url("../img/main_about_4.png") no-repeat center/cover;}
+.slide li:nth-child(1){background: url("../img/main_about_1.jpg") no-repeat center/cover;}
+.slide li:nth-child(2){background: url("../img/main_about_2.jpg") no-repeat center/cover;}
+.slide li:nth-child(3){background: url("../img/main_about_3.jpg") no-repeat center/cover;}
+.slide li:nth-child(4){background: url("../img/main_about_4.jpg") no-repeat center/cover;}
 
 /* Petsitter */
 
@@ -365,7 +365,7 @@
 
 /* Reservation */
 #reservation{
-    background: linear-gradient(var(--color-white), transparent 50%), url(../img/main_reserv.png) no-repeat center/cover;
+    background: linear-gradient(var(--color-white), transparent 50%), url(../img/main_reserv.jpg) no-repeat center/cover;
 }
 
 #reservation .container{

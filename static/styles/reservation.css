@@ -292,3 +292,17 @@ form input{
     text-align: left;
 }
 
+@media screen and (max-width: 992px){
+    #name,#phone,.pet_sub,.service,#date,.address_im,.address_postcode,.address_road,.address_detail{
+        width: 15rem;
+    }
+    .time_main{
+        font-size: 0.8rem;
+    }        
+    .open.text-sm{
+        font-size: 1rem;
+    }
+    .name_main.item,.phone_main.item,.pet_main.item,.service_main.item,.date_main.item,.address_main.item{
+        padding-left: 8rem;
+    }
+}
