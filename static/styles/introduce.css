@@ -1,8 +1,8 @@
 *,*::after,*::before{box-sizing: border-box;padding: 0;margin: 0;}
 a{text-decoration: none;color: #262626;}ul,li{list-style: none;}button{cursor: pointer;border: none;outline: none;}
-img{width: 100%;max-width: 100%;}.container{width: 100%;max-width: 1100px;margin: 0 auto;}
+img{width: 100%;max-width: 100%;}.container{width: 100%;max-width: 1200px;margin: 0 auto;}
 html{font-family: 'Noto Sans KR', sans-serif; color: #262626;}
-
+section{padding: 8rem 0;}
 :root{
     --color-primary: #f3d537;
 }
@@ -30,7 +30,8 @@ html{font-family: 'Noto Sans KR', sans-serif; color: #262626;}
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 3rem;
     position: sticky;
     top: 0;
     background: var(--color-primary);
@@ -60,18 +61,29 @@ html{font-family: 'Noto Sans KR', sans-serif; color: #262626;}
     font-weight: 500;
 }
 
+.nav__link {
+    border-bottom: 2px solid transparent;
+    padding: .3rem .8rem;
+    transition: all .3 ease-in;
+}
+.nav__link.selected,
+.nav__link:hover{
+    border-bottom: 2px solid rgba(255, 255, 255, .8);
+    /* border-radius: 8px; */
+}
+
 /* Toggle은 반응형 웹 할 때 */
 
 /* Home */
 
 #home{
     background: var(--color-primary);
+    padding: 4rem 0 8rem;
 }
 
 #home .container{
-    padding: 4rem 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -81,9 +93,9 @@ html{font-family: 'Noto Sans KR', sans-serif; color: #262626;}
 
 }
 
-.home__description .text-extra-lg{
+.home__description .text-extra-lg.last{
     font-weight: 500;
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
 }
 
 .home__description .button{
@@ -94,4 +106,23 @@ html{font-family: 'Noto Sans KR', sans-serif; color: #262626;}
 
 .home__description .button:hover{
     color: #262626;
+}
+
+/* Responsive */
+
+#responsive .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.responsive__img{
+    width: 800px;
+}
+
+.responsive__desc .text-extra-lg{
+    border-bottom: 4px solid var(--color-primary);
+}
+
+.responsive__desc p:nth-child(2){
+    margin-bottom: 1.5rem;
 }
