@@ -20,7 +20,7 @@ input{
 
 
 #form .container{
-    padding: 1rem 3rem 7rem;
+    padding: 3.5rem 3rem 7rem;
     border-color: rgba(197, 164, 126, .4);
 }
 
@@ -67,7 +67,7 @@ input{
     padding-right: 30%;
     font-size: 1rem; 
     text-align: center;
-    width: 6rem;
+    width: 100px;
     display: inline-block;
     color: black;
     margin: 0.2px;
@@ -303,6 +303,12 @@ form input{
         font-size: 1rem;
     }
     .name_main.item,.phone_main.item,.pet_main.item,.service_main.item,.date_main.item,.address_main.item{
-        padding-left: 8rem;
+        width: 3rem;
+
+    }
+}
+@media screen and (max-width: 688px){
+    .name_main.item,.phone_main.item,.pet_main.item,.service_main.item,.date_main.item,.address_main.item{
+        padding-right: 15rem;
     }
 }
