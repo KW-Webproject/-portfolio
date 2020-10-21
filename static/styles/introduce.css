@@ -188,5 +188,29 @@ section{
     margin-bottom: 4px;
 }
 
-.etc{
+/* Team */
+
+#team{
+    padding: 0 0 8rem;
+}
+.team__desc{
+    text-align: center;
+}
+
+.desc__img{
+    margin: 0 auto;
+    width: 250px;
+}
+
+.desc__bubble{
+    border: 1px solid var(--color-primary);
+    border-radius: 12px;
+    padding: 2rem 3rem;
+    position: relative;
+    top: -80px;
+}
+
+.desc__bubble p{
+    line-height: 2;
+    font-weight: 500;
 }
