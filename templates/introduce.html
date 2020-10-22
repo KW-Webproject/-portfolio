@@ -27,7 +27,7 @@
             <div class="header__nav">
                 <ul class="nav__menu">
                     <li class="nav__item about selected" data-link="#home">About</li>
-                    <li class="nav__item service" data-link="#Service">Service</li>
+                    <li class="nav__item service" data-link="#service">Service</li>
                     <li class="nav__item skills" data-link="#skills">Skills</li>
                     <li class="nav__item team" data-link="#team">Team</li>
                 </ul>
@@ -38,7 +38,9 @@
     <section id="home">
         <div class="container">
             <div class="home__video_container">
-                <video src=" ../static/video/petland.mp4" width="680px" autoplay loop muted></video>
+                <video width="680px" autoplay loop muted>
+                    <source src={{url_for('static', filename="video/petland.mp4")}} type="video/mp4">
+                </video>
             </div>
             <div class="home__description text-lg">
                 <p>바로 돌봄, 예약 돌봄, 정기 돌봄까지</p>
@@ -166,7 +168,7 @@
                 </div>
                 <div class="member jc">
                     <p class="text-md">송종천</p>
-                    <p class="text-sm">백엔드 담당, DBA</p>
+                    <p class="text-sm">백엔드 담당 DBA</p>
                 </div>
                 <div class="member hs">
                     <p class="text-md">변해성</p>
