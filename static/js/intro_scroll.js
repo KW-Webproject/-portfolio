@@ -3,13 +3,13 @@ let selected = document.querySelector(".selected");
 
 
 const home = document.querySelector("#home").getBoundingClientRect().height;
-const service_height = document.querySelector("#service").getBoundingClientRect().height;
-const skill_height = document.querySelector("#skills").getBoundingClientRect().height;
-const team_height = document.querySelector("#team").getBoundingClientRect().height;
+const serviceHeight = document.querySelector("#service").getBoundingClientRect().height;
+const skillHeight = document.querySelector("#skills").getBoundingClientRect().height;
+const teamHeight = document.querySelector("#team").getBoundingClientRect().height;
 
-const service = home + service_height;
-const skill = service + skill_height;
-const team = skill + team_height;
+const service = home + serviceHeight;
+const skill = service + skillHeight;
+const team = skill + teamHeight;
 
 const toggle = document.querySelector(".header__toggle");
 const nav = document.querySelector(".header__nav");

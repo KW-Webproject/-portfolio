@@ -9,10 +9,10 @@ let service = document.querySelectorAll("#service");
 let time = document.querySelectorAll("#time");
 let postcode = document.querySelector("#postcode");
 let detailaddr = document.querySelector("#detailaddress");
-const pattern_spc = /[~!@#$%^&*()_+|<>?:{}]/;
-const pattern_num = /[0-9]/;
-const pattern_eng = /[a-zA-Z]/;
-const pattern_kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+const petternSpc = /[~!@#$%^&*()_+|<>?:{}]/;
+const petternNum = /[0-9]/;
+const petternEng = /[a-zA-Z]/;
+const petternKor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
 
 button.addEventListener('click', () => {
 
@@ -29,7 +29,7 @@ function checkName() {
         return false;
     }
     //특수문자나 숫자 입력하면 false
-    if (pattern_spc.test(nameValue) || pattern_num.test(nameValue)) {
+    if (petternSpc.test(nameValue) || petternNum.test(nameValue)) {
         alert("이름을 올바른 형식으로 입력해주세요.");
         return false;
     }
@@ -44,7 +44,7 @@ function checkPhone() {
         return false;
     }
     //숫자 외에 입력하면 false
-    if (pattern_spc.test(phoneValue) || pattern_eng.test(phoneValue) || pattern_kor.test(phoneValue)) {
+    if (petternSpc.test(phoneValue) || petternEng.test(phoneValue) || petternKor.test(phoneValue)) {
         alert("전화번호에 숫자만 입력해주세요.");
         return false;
     }
