@@ -108,5 +108,10 @@ def check_submit():
         return render_template("reservation_check2.html", content=user_info)
 
 
+@app.route("/intro")
+def intro():
+    return render_template("introduce.html")
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
